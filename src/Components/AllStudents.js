@@ -12,9 +12,8 @@ function AllStudents({ data }) {
         const monthIndex = parseInt(dateParts[0]) - 1;
         const day = parseInt(dateParts[1]);
         const year = parseInt(dateParts[2]);
-        const outputDate = monthNames[monthIndex] + " " + day + " " + year;
-        return outputDate; // Output: "February 3 1979"
-
+        const outputDate = monthNames[monthIndex] + " " + day + ", " + year;
+        return outputDate; 
     }
     return (
         <>
@@ -29,7 +28,7 @@ function AllStudents({ data }) {
                                 <div className="card-body">
                                     <h5 className="card-title">{Object.values(item['names']).join(' ')}</h5>
                                     <p className="card-text">{item['username']}</p>
-                                    <p className="card-text">Birthday: {makeDate(item['dob'])}</p>
+                                    <p className="card-text"><span className='text-success'>Birthday:</span> {makeDate(item['dob'])}</p>
                                     <a style={{ cursor: 'pointer' }} className="pointer" onClick={() => { setIndex(i); setBool(!bool) }}>{(index === i && bool) ? 'Show Less..' : 'Show More..'}</a>
                                 </div>
                             </div>
@@ -41,25 +40,25 @@ function AllStudents({ data }) {
                                         <div className="col-sm-4">
                                             <h6 className="card-subtitle py-1">Codewars:</h6>
                                             <br />
-                                            <p>Current Total: {item['codewars']['current']['total']}</p>
-                                            <p>Last Week: {item['codewars']['current']['lastWeek']}</p>
-                                            <p>Goal: {item['codewars']['goal']['total']}</p>
-                                            <p>Percent of Goal Achieved: {((item['codewars']['current']['total'] / item['codewars']['goal']['total']) * 100).toFixed(0)}%</p>
+                                            <p><span className='text-success'>Current Total:</span> {item['codewars']['current']['total']}</p>
+                                            <p><span className='text-success'>Last Week:</span> {item['codewars']['current']['lastWeek']}</p>
+                                            <p><span className='text-success'>Goal:</span> {item['codewars']['goal']['total']}</p>
+                                            <p><span className='text-success'>Percent of Goal Achieved:</span> {((item['codewars']['current']['total'] / item['codewars']['goal']['total']) * 100).toFixed(0)}%</p>
                                         </div>
                                         <div className="col-sm-4">
                                             <h6 className="card-subtitle py-1">Scores</h6>
                                             <br />
-                                            <p>Assignments: {item['cohort']['scores']['assignments'] * 100}%</p>
-                                            <p>Projects: {item['cohort']['scores']['projects'] * 100}%</p>
-                                            <p>Assessments: {item['cohort']['scores']['assessments'] * 100}%</p>
+                                            <p><span className='text-success'>Assignments:</span> {item['cohort']['scores']['assignments'] * 100}%</p>
+                                            <p><span className='text-success'>Projects:</span> {item['cohort']['scores']['projects'] * 100}%</p>
+                                            <p><span className='text-success'>Assessments:</span> {item['cohort']['scores']['assessments'] * 100}%</p>
                                         </div>
                                         <div className="col-sm-4">
                                             <h6 className="card-subtitle py-1" id='cert'>Certifications</h6>
                                             <br />
-                                            <p>Resume: {item['certifications']['resume'] ? (<FaCheck />) : (<i className="fs-1 text-danger">x</i>)}</p>
-                                            <p>LinkedIn: {item['certifications']['linkedin'] ? (<FaCheck />) : (<i className="fs-1 text-danger">x</i>)}</p>
-                                            <p>Mock Interview: {item['certifications']['mockInterview'] ? (<FaCheck />) : (<i className="fs-1 text-danger">x</i>)}</p>
-                                            <p>GitHub: {item['certifications']['github'] ? (<FaCheck />) : (<i className="fs-1 text-danger">x</i>)}</p>
+                                            <p><span className='text-success'>Resume:</span> {item['certifications']['resume'] ? (<FaCheck />) : (<i className="fs-1 text-danger">x</i>)}</p>
+                                            <p><span className='text-success'>LinkedIn:</span> {item['certifications']['linkedin'] ? (<FaCheck />) : (<i className="fs-1 text-danger">x</i>)}</p>
+                                            <p><span className='text-success'>Mock Interview:</span> {item['certifications']['mockInterview'] ? (<FaCheck />) : (<i className="fs-1 text-danger">x</i>)}</p>
+                                            <p><span className='text-success'>GitHub:</span> {item['certifications']['github'] ? (<FaCheck />) : (<i className="fs-1 text-danger">x</i>)}</p>
                                         </div>
                                     </div>
                                 </div>
