@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { FaCheck } from 'react-icons/fa'
 function AllStudents({ data }) {
 
-    const [bool, setBool] = useState(false)
     const [index, setIndex] = useState(null)
 
     function makeDate(args) {
@@ -13,8 +12,12 @@ function AllStudents({ data }) {
         const day = parseInt(dateParts[1]);
         const year = parseInt(dateParts[2]);
         const outputDate = monthNames[monthIndex] + " " + day + ", " + year;
-        return outputDate; 
+        return outputDate;
     }
+
+    const handleCardExpand = (args) => {
+        setIndex(index === args ? null : args);
+    };
     return (
         <>
             {data.map((item, i) => {
@@ -29,11 +32,11 @@ function AllStudents({ data }) {
                                     <h5 className="card-title">{Object.values(item['names']).join(' ')}</h5>
                                     <p className="card-text">{item['username']}</p>
                                     <p className="card-text"><span className='text-success'>Birthday:</span> {makeDate(item['dob'])}</p>
-                                    <a style={{ cursor: 'pointer' }} className="pointer" onClick={() => { setIndex(i); setBool(!bool) }}>{(index === i && bool) ? 'Show Less..' : 'Show More..'}</a>
+                                    <a style={{ cursor: 'pointer' }} className="pointer" onClick={() => { handleCardExpand(i) }}>{index === i ? 'Show Less..' : 'Show More..'}</a>
                                 </div>
                             </div>
                         </div>
-                        {(index === i && bool) && (
+                        {index === i && (
                             <div className="card m-1" id='sinfo' style={{ width: 'fit-content', borderColor: 'purple', borderWidth: 'thick' }}>
                                 <div className="card-body">
                                     <div className="row">
