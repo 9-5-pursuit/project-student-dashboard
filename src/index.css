@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@200&display=swap');
 
-.card {
-    font-family: 'Public Sans', sans-serif;
-}
+.post-image-w {
+    width: 60%;
+  }
+
+  @media (max-width: 830px) {
+    #cert {
+      font-size: 0.75rem;
+    }
+
+  }
+  @media (max-width: 460px) {
+    #cert {
+      font-size: 1rem;
+    }
+
+  }
