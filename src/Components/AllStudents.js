@@ -27,7 +27,7 @@ function AllStudents({ data }) {
                             <div className="col-md-4">
                                 <img src={item['profilePhoto']} className="post-image-w p-2" alt="Your image alt text here" />
                             </div>
-                            <div className="col-md-8">
+                            <div className="col-md-8 px-0">
                                 <div className="card-body">
                                     <h5 className="card-title">{Object.values(item['names']).join(' ')}</h5>
                                     <p className="card-text">{item['username']}</p>

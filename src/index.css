@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@200&display=swap');
 
-.post-image-w {
-    width: 60%;
-  }
-
   @media (max-width: 830px) {
     #cert {
       font-size: 0.75rem;
@@ -14,5 +10,11 @@
     #cert {
       font-size: 1rem;
     }
+
+  }
+  @media (max-width: 1300px) {
+    .post-image-w {
+        width: 80%;
+      }
 
   }
