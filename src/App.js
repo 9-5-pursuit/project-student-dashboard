@@ -1,3 +1,4 @@
+import { useState } from "react";
 import data from "./data/data.json";
 // const days = [
 //   "Sunday",
@@ -43,7 +44,15 @@ function App() {
   }
 
   let unique = [...new Set(arr)];
-  console.log(unique);
+  // console.log(unique);
+
+  for (let i of unique) {
+    i.match(/[a-zA-Z]+|[0-9]+/g);
+  }
+
+  // console.log(unique.sort());
+  // const sorted = unique.sort();
+  // console.log(sorted);
 
   return (
     <div className="App">
@@ -51,19 +60,27 @@ function App() {
         <h1>Student Dashboard</h1>
       </header>
 
+      {/**********************************/}
+
       <aside className="my-4">
         <h3>Choose a Class by Start Date</h3>
 
         <ul className="list-group list-group-flush">
           <li className="list-group-item fw-bold">All Students</li>
 
-          <li className="list-group-item fw-bold ">Winter 2026</li>
-          <li className="list-group-item fw-bold">Fall 2026</li>
-          <li className="list-group-item fw-bold">Summer 2026</li>
-          <li className="list-group-item fw-bold">Spring 2026</li>
+          {unique.map((item) => {
+            return (
+              <li key={Math.random()} className="list-group-item fw-bold">
+                {item}
+              </li>
+            );
+          })}
+
           <li></li>
         </ul>
       </aside>
+
+      {/**********************************/}
 
       <main className="my-4">
         <div className="main-header">
@@ -73,42 +90,141 @@ function App() {
           </p>
         </div>
 
-        <div className="card mb-3" style={{ maxwidth: "540px" }}>
-          <div className="row g-0">
-            <div className="col-md-4">
-              <img
-                src={data[0]["profilePhoto"]}
-                className="img-fluid rounded-start"
-                alt="..."
-              />
-            </div>
-            <div className="col-md-8">
-              <div className="card-body">
-                <h5 className="card-title">
-                  {data[0]["names"]["preferredName"] +
-                    " " +
-                    data[0]["names"]["middleName"][0] +
-                    "." +
-                    " " +
-                    data[0]["names"]["surname"]}
-                </h5>
-                <p className="card-email">{data[0]["username"]}</p>
-                <p className="card-birthday">
-                  <span>Birthday: </span>
-                  {data[0]["dob"]}
-                </p>
-                <p className="show-more">
-                  <small>
-                    <a href="#">
-                      <span>Show More...</span>
-                    </a>
-                  </small>
-                </p>
-              </div>
-            </div>
-          </div>
+        <div className="card-container">
+          {data.map(
+            ({
+              names,
+              username,
+              dob,
+              profilePhoto,
+              id,
+              codewars,
+              cohort,
+              certifications,
+            }) => {
+              return (
+                <div
+                  key={id}
+                  className="card mb-3"
+                  style={{ maxwidth: "540px" }}
+                >
+                  <div className="row g-0">
+                    <div className="col-md-4">
+                      <img
+                        src={profilePhoto}
+                        className="img-fluid rounded-start"
+                        alt="..."
+                      />
+                    </div>
+                    <div className="col-md-8">
+                      <div className="card-body">
+                        <h5 className="card-title">
+                          {names["preferredName"] +
+                            " " +
+                            names["middleName"][0] +
+                            "." +
+                            " " +
+                            names["surname"]}
+                        </h5>
+                        <p className="card-email">{username}</p>
+                        <p className="card-birthday">
+                          <span>Birthday: </span>
+                          {dob}
+                        </p>
+
+                        <p>
+                          <a
+                            className="btn btn-link"
+                            data-bs-toggle="collapse"
+                            href={"#" + id}
+                            role="button"
+                            aria-expanded="false"
+                            aria-controls="collapseExample"
+                          >
+                            <span>Show More...</span>
+                          </a>
+                        </p>
+                        <div className="collapse" id={id}>
+                          <div className="card-body">
+                            <table className="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Codewars:</th>
+                                  <th scope="col">Scores:</th>
+                                  <th scope="col">Certifications:</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    Current Total:{" "}
+                                    {codewars["current"]["total"]}
+                                  </td>
+                                  <td>
+                                    Assignments:{" "}
+                                    {cohort["scores"]["assignments"] * 100} %
+                                  </td>
+                                  <td>
+                                    Resume:{" "}
+                                    {!certifications["resume"] ? "x" : "/"}
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    Last Week: {codewars["current"]["lastWeek"]}
+                                  </td>
+                                  <td>
+                                    Projects:{" "}
+                                    {cohort["scores"]["projects"] * 100} %
+                                  </td>
+                                  <td>
+                                    LinkedIn:{" "}
+                                    {!certifications["linkedin"] ? "x" : "/"}
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>Goal: {codewars["goal"]["total"]}</td>
+                                  <td>
+                                    Assessments:{" "}
+                                    {cohort["scores"]["assessments"] * 100} %
+                                  </td>
+                                  <td>
+                                    Mock Interview:{" "}
+                                    {!certifications["mockInterview"]
+                                      ? "x"
+                                      : "/"}
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td colSpan="2">
+                                    Percent of Goal Achieved:{" "}
+                                    {(
+                                      (codewars["current"]["total"] /
+                                        codewars["goal"]["total"]) *
+                                      100
+                                    ).toFixed()}{" "}
+                                    %
+                                  </td>
+                                  <td>
+                                    Github:{" "}
+                                    {!certifications["github"] ? "x" : "/"}
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            }
+          )}
         </div>
       </main>
+
+      {/**********************************/}
     </div>
   );
 }
