@@ -1,0 +1,22 @@
+header {
+  background-color: #5c946e;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+aside {
+  border: solid 2px rgb(177, 114, 114);
+}
+
+.list-group-item {
+  border: solid #5c946e 3px;
+}
+
+main {
+  border: solid 2px lightblue;
+}
+
+span {
+  color: #5c946e;
+}
