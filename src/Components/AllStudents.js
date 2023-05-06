@@ -4,6 +4,7 @@ import { FaCheck } from 'react-icons/fa'
 function AllStudents({ data }) {
 
     const [index, setIndex] = useState(null)
+    var num = null
 
     function makeDate(args) {
         const dateParts = args.split("/");
@@ -23,12 +24,17 @@ function AllStudents({ data }) {
         else return ''
     }
 
+    function studentScore(args) {
+        num = Math.round((args['codewars']['current']['total'] / args['codewars']['goal']['total']) * 100)
+    }
+
     const handleCardExpand = (args) => {
         setIndex(index === args ? null : args);
     };
     return (
         <>
             {data.map((item, i) => {
+                studentScore(item)
                 return (
                     <div className="card border-success my-1" key={item.id}>
                         <div className="row no-gutters">
@@ -59,7 +65,7 @@ function AllStudents({ data }) {
                                             <p><span className='text-success'>Current Total:</span> {item['codewars']['current']['total']}</p>
                                             <p><span className='text-success'>Last Week:</span> {item['codewars']['current']['lastWeek']}</p>
                                             <p><span className='text-success'>Goal:</span> {item['codewars']['goal']['total']}</p>
-                                            <p><span className='text-success'>Percent of Goal Achieved:</span> {((item['codewars']['current']['total'] / item['codewars']['goal']['total']) * 100).toFixed(0)}%</p>
+                                            <p><span className={num >= 100 ? 'text-success' : (num >= 50 && num < 100) ? 'text-warning' : num < 50 ? 'text-danger' : '' }>Percent of Goal Achieved:</span> {num}%</p>
                                         </div>
                                         <div className="col-sm-4">
                                             <h6 className="card-subtitle py-1">Scores</h6>
