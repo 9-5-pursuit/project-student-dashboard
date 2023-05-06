@@ -23,7 +23,7 @@ function App() {
     </div>
   </div>
       
-      <div className="container" style={{maxWidth: '90%'}}>
+      <div className="container py-2" style={{maxWidth: '90%'}}>
       <div className="row">
         <div className="col-sm-3 bg-light px-4"><Months setCards={setCards} setC={setC}/></div>
         <div className="col-sm-9 px-4">

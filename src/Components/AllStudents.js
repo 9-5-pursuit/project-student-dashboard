@@ -119,7 +119,7 @@ function AllStudents({ data }) {
                                     </div>
                                     <ul>
                                         {form[id] && (
-                                            form[id].map((item, i) => {
+                                            form[id].map((item) => {
                                                 return <li key={generateId()}>
                                                     {item}
                                                 </li>
