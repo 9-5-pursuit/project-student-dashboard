@@ -19,11 +19,16 @@ function Months({ setCards, setC }) {
                         <td style={{ cursor: 'pointer' }}><a onClick={() => { setCards(sData); setC('All Students') }}>All Students</a></td>
                     </tr>
                     {
-                        [...new Set(sData.map(item => item.cohort.cohortCode))].map((item, i) => {
-                            return <tr key={i + 1} className='border-success'>
-                                <td style={{ cursor: 'pointer' }}><a onClick={() => { handleClick(item); setC(item) }}>{item.replace(/(\D)(\d)/, '$1 $2')}</a></td>
-                            </tr>
-                        })
+                        [...new Set(sData.map(item => item.cohort.cohortCode + ',' + item.cohort.cohortStartDate))].
+                            sort((a, b) => {
+                                const cohortCodeA = new Date(a.split(',')[1]);
+                                const cohortCodeB = new Date(b.split(',')[1]);
+                                return cohortCodeA - cohortCodeB;
+                            }).map((item, i) => {
+                                return <tr key={i + 1} className='border-success'>
+                                    <td style={{ cursor: 'pointer' }}><a onClick={() => { handleClick(item.split(',')[0]); setC(item.split(',')[0]) }}>{item.split(',')[0].replace(/(\D)(\d)/, '$1 $2')}</a></td>
+                                </tr>
+                            })
                     }
                 </tbody>
             </table>

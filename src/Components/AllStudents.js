@@ -15,6 +15,14 @@ function AllStudents({ data }) {
         return outputDate;
     }
 
+    function status(args) {
+        if (
+            args.certifications.resume && args.certifications.linkedin && args.certifications.github
+            && args.certifications.mockInterview && args.codewars.current.total > 600
+        ) return 'On Track to Graduate';
+        else return ''
+    }
+
     const handleCardExpand = (args) => {
         setIndex(index === args ? null : args);
     };
@@ -27,12 +35,17 @@ function AllStudents({ data }) {
                             <div className="col-md-4">
                                 <img src={item['profilePhoto']} className="post-image-w p-2" alt="Your image alt text here" />
                             </div>
-                            <div className="col-md-8 px-0">
+                            <div className="col-md-4 px-0">
                                 <div className="card-body">
                                     <h5 className="card-title">{Object.values(item['names']).join(' ')}</h5>
                                     <p className="card-text">{item['username']}</p>
                                     <p className="card-text"><span className='text-success'>Birthday:</span> {makeDate(item['dob'])}</p>
                                     <a style={{ cursor: 'pointer' }} className="pointer" onClick={() => { handleCardExpand(i) }}>{index === i ? 'Show Less..' : 'Show More..'}</a>
+                                </div>
+                            </div>
+                            <div className="col-md-4 px-0">
+                                <div className='card-body'>
+                                <h5 className="card-title text-success">{status(item)}</h5>
                                 </div>
                             </div>
                         </div>
