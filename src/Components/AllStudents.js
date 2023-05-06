@@ -73,11 +73,11 @@ function AllStudents({ data }) {
                         </div>
                         {index === i && (
                             <>
-                                <div className="card m-1" id='sinfo' style={{ width: 'fit-content', borderColor: 'purple', borderWidth: 'thick' }}>
+                                <div className="card m-1 border-success" id='sinfo' style={{ width: 'fit-content' }}>
                                     <div className="card-body">
                                         <div className="row">
                                             <div className="col-sm-4">
-                                                <h6 className="card-subtitle py-1">Codewars:</h6>
+                                                <h6 className="card-subtitle">Codewars:</h6>
                                                 <br />
                                                 <p><span className='text-success'>Current Total:</span> {item['codewars']['current']['total']}</p>
                                                 <p><span className='text-success'>Last Week:</span> {item['codewars']['current']['lastWeek']}</p>
@@ -85,14 +85,14 @@ function AllStudents({ data }) {
                                                 <p><span className={num >= 100 ? 'text-success' : (num >= 50 && num < 100) ? 'text-warning' : num < 50 ? 'text-danger' : ''}>Percent of Goal Achieved:</span> {num}%</p>
                                             </div>
                                             <div className="col-sm-4">
-                                                <h6 className="card-subtitle py-1">Scores</h6>
+                                                <h6 className="card-subtitle">Scores</h6>
                                                 <br />
                                                 <p><span className='text-success'>Assignments:</span> {item['cohort']['scores']['assignments'] * 100}%</p>
                                                 <p><span className='text-success'>Projects:</span> {item['cohort']['scores']['projects'] * 100}%</p>
                                                 <p><span className='text-success'>Assessments:</span> {item['cohort']['scores']['assessments'] * 100}%</p>
                                             </div>
                                             <div className="col-sm-4">
-                                                <h6 className="card-subtitle py-1" id='cert'>Certifications</h6>
+                                                <h6 className="card-subtitle" id='cert'>Certifications</h6>
                                                 <br />
                                                 <p><span className='text-success'>Resume:</span> {item['certifications']['resume'] ? (<FaCheck />) : (<i className="fs-1 text-danger">x</i>)}</p>
                                                 <p><span className='text-success'>LinkedIn:</span> {item['certifications']['linkedin'] ? (<FaCheck />) : (<i className="fs-1 text-danger">x</i>)}</p>

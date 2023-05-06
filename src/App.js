@@ -1,6 +1,6 @@
 import Months from "./Components/Months";
 import AllStudents from "./Components/AllStudents";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import sData from './data/data.json'
 function App() {
 
