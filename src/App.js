@@ -22,10 +22,9 @@ function App() {
       <h1 className="text-center text-white">Student Dashboard</h1>
     </div>
   </div>
-      
       <div className="container py-2" style={{maxWidth: '90%'}}>
       <div className="row">
-        <div className="col-sm-3 bg-light px-4"><Months setCards={setCards} setC={setC}/></div>
+        <div className="col-sm-3 bg-light px-4"><Months setCards={setCards} setC={setC} cohort={cohort}/></div>
         <div className="col-sm-9 px-4">
           <div>
             <h1>{cohort.replace(/(\D)(\d)/, '$1 $2')}</h1>

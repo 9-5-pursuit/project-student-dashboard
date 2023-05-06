@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { FaCheck } from 'react-icons/fa'
 import { v1 as generateId } from 'uuid'
 function AllStudents({ data }) {
@@ -10,6 +10,10 @@ function AllStudents({ data }) {
     const [id, setId] = useState('')
     const [form, setForm] = useState({});
     var num = null
+
+    useEffect(() => {
+        setIndex(null)
+    }, [data])
 
     const handleSubmit = (e) => {
         e.preventDefault();

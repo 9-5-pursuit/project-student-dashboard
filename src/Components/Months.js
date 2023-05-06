@@ -1,10 +1,10 @@
 import React from 'react'
 import sData from '../data/data.json'
 
-function Months({ setCards, setC }) {
+function Months({ setCards, setC, cohort }) {
 
     function handleClick(args) {
-        setCards(sData.filter(item => item.cohort.cohortCode === args))
+        if (cohort !== args) setCards(sData.filter(item => item.cohort.cohortCode === args))
     }
     return (
         <>
