@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import StudentList from "./StudentList";
 
 function CohortList({ data }) {
-  //   function updateStudentList(data) {}
+  const [cohortStudentList, setCohortStudentList] = useState();
+  const [originalData, setOriginalData] = useState(data);
 
+  function updateStudentList(cohortYears) {
+    let year = cohortYears.replace(" ", "");
+    let cohortData = data.filter(({ cohort }) => year === cohort.cohortCode);
+
+    if (cohortData.length > 0) {
+      console.log(cohortData);
+      setCohortStudentList(cohortData);
+      return cohortData;
+    }
+  }
+
+  //   this function is to get the different years of the cohorts
   function cohortCode(data) {
     let cohortYears = [];
-
     const Winter2026 = data.filter(
       ({ cohort }) => cohort.cohortCode === "Winter2026"
     );
@@ -36,8 +48,7 @@ function CohortList({ data }) {
       //   console.log("im in Winter 2026");
       cohortYears.push("Winter 2026");
     }
-    if (Fall2026) {
-      //   console.log("im in Fall 2026");
+    if (Fall2026.length > 0) {
       cohortYears.push("Fall 2026");
     }
     if (Summer2026.length > 0) {
@@ -68,8 +79,6 @@ function CohortList({ data }) {
     return cohortYears;
   }
 
-  cohortCode(data);
-
   return (
     <>
       {/* COHORT LIST*/}
@@ -77,29 +86,16 @@ function CohortList({ data }) {
       <div>
         <p>All Students</p>
 
-        {/* {cohortCode(data) === "Winter 2026" && <p>Winter 2026</p>}
-        {cohortCode(data) === "Winter 2025" && <p>Winter 2025</p>} */}
-
-        {/* {cohortCode(data) => console.log()}
-         */}
-
         {cohortCode(data).map((cohortYears) => (
-          <p key={cohortYears}>{cohortYears}</p>
+          <div key={cohortYears}>
+            <p onClick={() => updateStudentList(cohortYears)}>{cohortYears}</p>
+          </div>
         ))}
-
-        {/* <p>Winter 2025</p> */}
-        {/* {data.map(({ id, cohort }) => {
-            
-        }
-        
-
-
-        
-        //   <p key={id}>{}</p>
-        
-        )} */}
       </div>
-      {/* <StudentList data={data} /> */}
+      <StudentList
+        originalData={originalData}
+        cohortStudentList={cohortStudentList}
+      />
     </>
   );
 }
