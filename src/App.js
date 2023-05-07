@@ -1,6 +1,7 @@
 import studentData from "./data/data.json";
 import { useState } from "react";
 import StudentCard from "./Components/StudentCard";
+import CohortList from "./Components/CohortList";
 
 function App() {
 const [students, setStudents] = useState(studentData)
@@ -12,16 +13,20 @@ const [students, setStudents] = useState(studentData)
       </header>
       
       <main>
-        <div className="allStudents">
+        <div className="students-container">
           <h2>All Students</h2>
           <p>Total Students: {studentData.length}</p>
           {/* use map to render StudentCard for each student */}
-          {students.map((student) => (
+          {/* {students.map((student) => (
             <div className="studentCard" key={student.id}>
               <StudentCard student={student} />
             </div>
-          ))}
+          ))} */}
         </div>
+
+        <aside className="cohort-container">
+          <CohortList students={students}/>
+        </aside>
       </main>
     
     </div>
