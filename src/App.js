@@ -16,12 +16,11 @@ const [students, setStudents] = useState(studentData)
         <div className="students-container">
           <h2>All Students</h2>
           <p>Total Students: {studentData.length}</p>
-          {/* use map to render StudentCard for each student */}
-          {/* {students.map((student) => (
+          {students.map((student) => (
             <div className="studentCard" key={student.id}>
               <StudentCard student={student} />
             </div>
-          ))} */}
+          ))}
         </div>
 
         <aside className="cohort-container">
