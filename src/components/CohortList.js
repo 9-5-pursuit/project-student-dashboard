@@ -33,37 +33,39 @@ function CohortList({ data }) {
     );
 
     if (Winter2026.length > 0) {
-      console.log("im in Winter 2026");
+      //   console.log("im in Winter 2026");
       cohortYears.push("Winter 2026");
     }
     if (Fall2026) {
-      console.log("im in Fall 2026");
+      //   console.log("im in Fall 2026");
       cohortYears.push("Fall 2026");
     }
     if (Summer2026.length > 0) {
-      console.log("im in Summer 2026");
+      //   console.log("im in Summer 2026");
       cohortYears.push("Summer 2026");
     }
     if (Spring2026.length > 0) {
-      console.log("im in Spring 2026");
+      //   console.log("im in Spring 2026");
       cohortYears.push("Spring 2026");
     }
     if (Winter2025.length > 0) {
-      console.log("im in Winter 2025");
+      //   console.log("im in Winter 2025");
       cohortYears.push("Winter 2025");
     }
     if (Fall2025.length > 0) {
-      console.log("im in Fall2025");
+      //   console.log("im in Fall2025");
       cohortYears.push("Fall 2025");
     }
     if (Summer2025.length > 0) {
-      console.log("im in Summer 2025");
+      //   console.log("im in Summer 2025");
       cohortYears.push("Summer 2025");
     }
     if (Spring2025.length > 0) {
-      console.log("im in Spring 2025");
+      //   console.log("im in Spring 2025");
       cohortYears.push("Spring 2025");
     }
+
+    return cohortYears;
   }
 
   cohortCode(data);
@@ -78,8 +80,12 @@ function CohortList({ data }) {
         {/* {cohortCode(data) === "Winter 2026" && <p>Winter 2026</p>}
         {cohortCode(data) === "Winter 2025" && <p>Winter 2025</p>} */}
 
-        {cohortCode(data) === "Winter 2026" ? <p>Winter 2026</p> : null}
-        {cohortCode(data) === "Winter 2025" ? <p>Winter 2025</p> : null}
+        {/* {cohortCode(data) => console.log()}
+         */}
+
+        {cohortCode(data).map((cohortYears) => (
+          <p key={cohortYears}>{cohortYears}</p>
+        ))}
 
         {/* <p>Winter 2025</p> */}
         {/* {data.map(({ id, cohort }) => {
