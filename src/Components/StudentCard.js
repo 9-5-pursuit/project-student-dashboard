@@ -7,7 +7,7 @@ export default function StudentCard({ student }) {
           {student.names.preferredName} {student.names.middleName.slice(0, 1)}. {student.names.surname}
         </h3>
         <p>{student.username}</p>
-        <p>Birthday: {student.dob}</p>;
+        <p>Birthday: {student.dob}</p>
         <img
           style={{ height: "150px", width: "150px" }}
           src={student.profilePhoto}
