@@ -1,15 +1,15 @@
 import { useState } from 'react'
 import Student from './Student'
 
-export default function StudentList({ studentData }) {
+export default function StudentList({ studentData, readableCohort }) {
     return (
         <div>
-            <h2>All Students</h2>
-            <p>Total Students: 0</p>
+            <h2>{readableCohort}</h2>
+            <p>Total Students: {studentData.length}</p>
             <ul>
                 {studentData.map((student) => {
                     return (
-                        <Student student={student}/>
+                        <Student student={student} key={student.id}/>
                     )
                 })}
             </ul>

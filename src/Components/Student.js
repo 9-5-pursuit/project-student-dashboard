@@ -1,4 +1,17 @@
+import StudentDetails from './StudentDetails'
+
+import { useState } from 'react'
+
 export default function Student({ student }) {
+    const [details, setDetails] = useState(false)
+    const [graduate, setGraduate] = useState(false)
+
+    // if (student.certifications.resume && student.certifications.linkedin && student.certifications.github && student.certifications.mockInterview) {
+    //     setGraduate(true)
+    // } else {
+    //     setGraduate(false)
+    // }
+
     function formatName(nameObj) {
         let formattedName = ""
 
@@ -74,13 +87,17 @@ export default function Student({ student }) {
 
     return (
         <div style={studentStyle}>
-            <img src="..." alt="Card image cap"/>
+            <img src={student.profilePhoto} alt="Card image cap"/>
                 <div>
-                    <h5>{formatName(student.names)}</h5>
+                    <h3>{formatName(student.names)}</h3>
                     <p>{student.username}</p>
                     <p><span>Birthday:</span> {formatDate(student.dob)}</p>
-                    <a href="#">Show More...</a>
+                    <p>{(graduate) ? "On Track To Graduate" : null}</p>
+                    <button onClick={() => {
+                        setDetails(!details)
+                        }}>{!details ? "Show More..." : "Show Less..."}</button>
                 </div>
+            {details ? <StudentDetails student={student}/> : null}
         </div>
     )
 }
