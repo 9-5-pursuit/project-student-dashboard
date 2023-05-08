@@ -7,7 +7,7 @@
 }
 
 .cohort-list-container li {
-  border-bottom: 2px solid #8d8c8d;
+  border-bottom: 2px solid #4889b8;
   padding: 20px;
   font-weight: bold;
   cursor: pointer;
@@ -20,5 +20,5 @@
 
 .cohort-list-container .active {
   /* color: #c9a6d9; */
-  color: #7f9fdf;
+  color: #4889b8;
 }

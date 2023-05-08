@@ -25,7 +25,7 @@
 
 .percent-bar-container {
   width: 70%;
-  border: 1px solid #fefefe;
+  border: 1px solid #f4f6f8;
   height: 20px;
   line-height: 20px;
 }
@@ -34,7 +34,7 @@
   height: 100%;
   font-size: 12px;
   font-weight: bold;
-  background: #999;
+  background: #786579;
   color: black;
   text-align: center;
 }

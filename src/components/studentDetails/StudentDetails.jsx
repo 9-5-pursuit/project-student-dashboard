@@ -1,4 +1,4 @@
-import OneOnOne from "../oneonone/OneOnOne";
+import OneOnOne from "../onoonone/OneOnOne";
 import "./StudentDetails.css";
 export default function studentDetails({ student, addNoteToStudent }) {
   const { codewars, certifications, cohort } = student;
