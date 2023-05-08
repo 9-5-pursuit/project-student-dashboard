@@ -34,11 +34,11 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #8d8c8d; /* color of the tracking area */
+  background: #4889b8; /* color of the tracking area */
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #252831; /* color of the scroll thumb */
+  background-color: #786579; /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
-  border: 3px solid #8c848d; /* creates padding around scroll thumb */
+  border: 3px solid #4889b8; /* creates padding around scroll thumb */
 }
