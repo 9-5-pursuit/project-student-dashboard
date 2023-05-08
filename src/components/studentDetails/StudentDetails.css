@@ -1,0 +1,40 @@
+.student-details {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 0.8fr;
+}
+
+.student-details p:nth-child(1) {
+  color: #6f6a6b;
+  font-style: italic;
+}
+
+.student-details p:not(:nth-child(1)) {
+  font-size: 0.9rem;
+}
+
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+.yellow {
+  color: #d8c307;
+}
+
+.percent-bar-container {
+  width: 70%;
+  border: 1px solid #fefefe;
+  height: 20px;
+  line-height: 20px;
+}
+
+.percent-bar {
+  height: 100%;
+  font-size: 12px;
+  font-weight: bold;
+  background: #999;
+  color: black;
+  text-align: center;
+}

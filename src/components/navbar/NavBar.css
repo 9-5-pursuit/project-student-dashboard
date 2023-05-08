@@ -1,0 +1,19 @@
+.navbar {
+  /* background: #393a3f; */
+  background: linear-gradient(45deg, #393a3f, #8c848d);
+  color: #cdcdcd;
+  text-align: center;
+  height: 80px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar h1 {
+  font-weight: 900;
+  font-style: italic;
+  font-size: 3rem;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
