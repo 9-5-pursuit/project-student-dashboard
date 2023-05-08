@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import Details from "./Details";
 
 function StudentList({ originalData, cohortStudentList, cohortYear }) {
+  const [showDetails, setShowDetails] = useState(false);
+  const [student, setStudent] = useState(null);
   function count() {
     let num;
     if (cohortStudentList) {
@@ -56,11 +59,23 @@ function StudentList({ originalData, cohortStudentList, cohortYear }) {
       certifications.linkedin &&
       certifications.github &&
       certifications.mockInterview &&
-      codewars.current.total >= 600
+      codewars.current.total > 600
     ) {
       return "On Track to Graduate";
     }
   }
+
+  function handleShowDetails(id) {
+    setShowDetails(true);
+    setStudent(id);
+  }
+
+  function handleHideDetails() {
+    setShowDetails(false);
+    setStudent(null);
+  }
+
+  console.log(student);
 
   return (
     <>
@@ -76,8 +91,15 @@ function StudentList({ originalData, cohortStudentList, cohortYear }) {
             dob,
             certifications,
             codewars,
+            cohort,
           }) => (
             <div key={id}>
+              <img
+                src={profilePhoto}
+                alt="student"
+                height="100px"
+                id="profile-photo"
+              />
               <p>
                 {names.preferredName} {names.middleName.charAt(0)}.
                 {names.surname}
@@ -85,12 +107,18 @@ function StudentList({ originalData, cohortStudentList, cohortYear }) {
               <p>{username}</p>
               <p>{birthdayConversion(dob)}</p>
               <p>{onTrackToGraduate(certifications, codewars)}</p>
-              <img
-                src={profilePhoto}
-                alt="student"
-                height="100px"
-                id="profile-photo"
-              />
+              <button onClick={() => handleShowDetails(id)}>
+                Show More...
+              </button>
+              {showDetails && student && (
+                <Details
+                  codewars={codewars}
+                  certifications={certifications}
+                  cohort={cohort}
+                />
+              )}
+
+              {/* codewars, certifications, cohort */}
             </div>
           )
         )}
