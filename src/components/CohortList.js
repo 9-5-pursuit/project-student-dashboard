@@ -4,13 +4,23 @@ import StudentList from "./StudentList";
 function CohortList({ data }) {
   const [cohortStudentList, setCohortStudentList] = useState();
   const [originalData, setOriginalData] = useState(data);
+  const [cohortYear, setCohortYear] = useState();
 
-  function updateStudentList(cohortYears) {
-    let year = cohortYears.replace(" ", "");
+  function updateStudentList(info) {
+    if (info.length === originalData.length) {
+      setOriginalData(data);
+      setCohortStudentList(null);
+      setCohortYear(null);
+      return data;
+    }
+
+    let year = info.replace(" ", "");
     let cohortData = data.filter(({ cohort }) => year === cohort.cohortCode);
 
     if (cohortData.length > 0) {
-      console.log(cohortData);
+      //   console.log(cohortData);
+      setCohortYear(info);
+
       setCohortStudentList(cohortData);
       return cohortData;
     }
@@ -81,10 +91,10 @@ function CohortList({ data }) {
 
   return (
     <>
-      {/* COHORT LIST*/}
       <h3>Choose a Class by Start Date</h3>
+
       <div>
-        <p>All Students</p>
+        <p onClick={() => updateStudentList(data)}>All Students</p>
 
         {cohortCode(data).map((cohortYears) => (
           <div key={cohortYears}>
@@ -92,21 +102,14 @@ function CohortList({ data }) {
           </div>
         ))}
       </div>
+
       <StudentList
         originalData={originalData}
         cohortStudentList={cohortStudentList}
+        cohortYear={cohortYear}
       />
     </>
   );
 }
-
-/* <p onClick={() => updateStudentList(data)}>Winter 2026 </p>
-        <p>Fall 2026</p>
-        <p>Summer 2026</p>
-        <p>Spring 2026</p>
-        <p>Winter 2025</p>
-        <p>Fall 2025</p>
-        <p>Summer 2025</p>
-        <p>Spring 2025</p> */
 
 export default CohortList;
