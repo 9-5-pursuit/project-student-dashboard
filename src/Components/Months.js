@@ -19,7 +19,7 @@ function Months({ setCards, setC, cohort }) {
                         <td style={{ cursor: 'pointer' }}><a onClick={() => { setCards(sData); setC('All Students') }}>All Students</a></td>
                     </tr>
                     {
-                        [...new Set(sData.map(item => item.cohort.cohortCode + ',' + item.cohort.cohortStartDate))].
+                        sData.map(item => item.cohort.cohortCode + ',' + item.cohort.cohortStartDate).
                             sort((a, b) => {
                                 const cohortCodeA = new Date(a.split(',')[1]);
                                 const cohortCodeB = new Date(b.split(',')[1]);
