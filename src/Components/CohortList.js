@@ -41,7 +41,6 @@ export default function Cohortlist({
     const filteredStudents = students.filter(
       (student) => student.cohort.cohortCode === cohortCode
     );
-    console.log(filteredStudents)
     setStudents(filteredStudents);
     setTotal(filteredStudents.length);
     setCurrentClass(cohortCode.slice(0, -4).concat(" ", cohortCode.slice(-4)));
