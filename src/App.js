@@ -1,9 +1,15 @@
-
+import Header from "./Header";
+import CohortList from "./CohortList";
+import StudentList from "./StudentList";
+import OneonOne from "./data/OneonOne";
 function App() {
   return (
-    <div>
-      <h1>Student Dashboard</h1>
-    </div>
+    <>
+      <Header />
+      <CohortList />
+      <StudentList />
+      <OneonOne />
+    </>
   );
 }
 
