@@ -1,8 +1,15 @@
+import Header from './Components/Header'
+import CohortList from './Components/CohortList'
+import StudentList from './Components/StudentList'
+
+import { useState } from 'react'
 
 function App() {
   return (
     <div>
-      <h1>Student Dashboard</h1>
+      <Header />
+      <CohortList />
+      <StudentList />
     </div>
   );
 }
