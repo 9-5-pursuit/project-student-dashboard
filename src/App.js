@@ -41,7 +41,7 @@ function App() {
   sortedCohortList.push(cohortList[1])
 
   return (
-    <div>
+    <div className="body">
       <Header />
       <CohortList filterStudents={filterStudents} filter={filter} setFilter={setFilter} sortedCohortList={sortedCohortList} setReadableCohort={setReadableCohort}/>
       <StudentList studentData={filteredStudentData} readableCohort={readableCohort}/>

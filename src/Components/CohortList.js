@@ -15,14 +15,14 @@ export default function CohortList({ filterStudents, filter, setFilter, sortedCo
             <ul style={{"listStyle": "none"}}>
                 <li onClick={() => {
                     setFilter("")
-                    filterStudents(filter)
+                    filterStudents("")
                     setReadableCohort("All Students")
                     }}>All Students</li>
                 {formattedCohorts.map((cohort) => {
                    return (
                     <li key={cohort} onClick={(e) => {
                         setFilter(e.target.textContent.split(" ").join(""))
-                        filterStudents(filter)
+                        filterStudents(e.target.textContent.split(" ").join(""))
                         setReadableCohort(cohort)
                     }}>{cohort}</li>
                    ) 

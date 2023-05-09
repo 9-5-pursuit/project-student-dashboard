@@ -1,11 +1,10 @@
-import { useState } from 'react'
 import Student from './Student'
 
 export default function StudentList({ studentData, readableCohort }) {
     return (
-        <div>
+        <div className="studentList">
             <h2>{readableCohort}</h2>
-            <p>Total Students: {studentData.length}</p>
+            <p className='total'>Total Students: {studentData.length}</p>
             <ul>
                 {studentData.map((student) => {
                     return (
