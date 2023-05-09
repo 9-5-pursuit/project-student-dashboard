@@ -2,33 +2,29 @@ import { useState } from "react";
 import { FaCheck, FaTimes } from "react-icons/fa";
 
 export default function StudentCard({ students }) {
-  //   const [showCard, setShowCard] = useState(false);
   const [inputName, setInputName] = useState("");
   const [inputComment, setInputComment] = useState("");
   const [indexState, setIndexState] = useState(null);
   const [commStor, setCommStor] = useState({});
 
+  //   formatting birthday
   function formatBirthday(bday) {
-    //   const dateString = "2/3/1979";
-    const dateArray = bday.split("/"); // split the string into an array of parts
+    const dateArray = bday.split("/");
     const year = dateArray[2];
-    const month = dateArray[0] - 1; // subtract 1 to convert to 0-based index
+    const month = dateArray[0] - 1;
     const day = dateArray[1];
-    const date = new Date(year, month, day); // create a new Date object
+    const date = new Date(year, month, day);
     const formattedDate = date.toLocaleString("en-US", {
       month: "long",
       day: "numeric",
       year: "numeric",
-    }); // format the date
-    return formattedDate; // output: "February 3, 1979"
+    });
+    return formattedDate;
   }
 
+  // adding a note on submit and resetting inputName and inputComment states
   function handleSubmit(e, person) {
     e.preventDefault();
-
-    // {123xyz: ["commenter", "comment"],
-    // 456cbs: {},
-    // 789lma: {}}
 
     const firstName =
       inputName[0].toUpperCase() + inputName.slice(1).toLowerCase();
@@ -52,6 +48,7 @@ export default function StudentCard({ students }) {
     setInputName("");
   }
 
+  //   Putting 'On track to graduate' if criteria met
   function handleOntrack(student) {
     if (
       student.certifications.resume &&
@@ -64,19 +61,21 @@ export default function StudentCard({ students }) {
     }
   }
 
+  //   Getting percentage
   function getPercentage(currentGoal, totalGoal) {
     return Math.round((currentGoal / totalGoal) * 100);
   }
 
+  //   Creating and attaching icons if criteria met
   function checkOrX(boolean) {
     if (boolean) {
       return <FaCheck color="green" />;
     } else {
       return <FaTimes color="red" />;
     }
-    // console.log(boolean);
   }
 
+  //   Changing color of percentage, depending on percentage info
   function colorChange(item) {
     if (
       getPercentage(item.codewars.current.total, item.codewars.goal.total) >=
@@ -122,7 +121,6 @@ export default function StudentCard({ students }) {
                   <a
                     className="text-success"
                     onClick={() => {
-                      //   setShowCard(!showCard);
                       setIndexState(index);
                     }}
                   >
@@ -132,7 +130,6 @@ export default function StudentCard({ students }) {
                   <a
                     className="text-success"
                     onClick={() => {
-                      //   setShowCard(!showCard);
                       setIndexState(null);
                     }}
                   >

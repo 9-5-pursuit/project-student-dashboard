@@ -1,25 +1,20 @@
 import studentData from "./data/data.json";
 import StudentCard from "./components/StudentCard";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function App() {
   const [students, setStudents] = useState(studentData);
-  const [showCard, setShowCard] = useState(false);
   const [cohortYear, setCohortYear] = useState("All Students");
 
+  // Formatting cohort name and year
   function handleCohort(semester) {
-    // console.log(semester);
     setStudents(
       studentData.filter((item) => semester === item.cohort.cohortCode)
     );
 
-    // console.log(semester);
     const year = semester.slice(-4);
     const season = semester.slice(0, -4);
-    console.log(season);
-    console.log(year);
     setCohortYear(`${season} ${year}`);
-    // console.log(cohortYear);
   }
 
   return (
@@ -29,9 +24,6 @@ function App() {
         <div className="row">
           <div className="col-4 m-3">
             <div className="col">
-              {/* <div className="row">
-                <span className="fw-bold">Choose a class by start date</span>
-              </div> */}
               <table className="table my-2">
                 <thead>
                   <tr>
@@ -107,33 +99,6 @@ function App() {
                   </tr>
                 </tbody>
               </table>
-              {/* <hr /> */}
-              {/* <a href="#" className="row">
-                All Students
-              </a>
-              <hr className="border-primary" />
-              <a href="#" className="row">
-                Winter 2026
-              </a>
-              <a href="#" className="row">
-                Fall 2026
-              </a>
-              <a href="#" className="row">
-                Summer 2026
-              </a>
-              <a href="#" className="row">
-                Spring 2026
-              </a>
-              <a href="#" className="row">
-                Winter 2025
-              </a>
-              <a href="#" className="row">
-                Fall 2025
-              </a>
-              <a href="#" className="row">
-                Summer 2025
-              </a>
-              <a className="row">Spring 2025</a> */}
             </div>
           </div>
           <div className="col-7 m-3">
