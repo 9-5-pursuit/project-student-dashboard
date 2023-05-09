@@ -6,9 +6,7 @@ import Semesters from "./Components/Semesters";
 function App() {
     const [students, setStudents] = useState(studentsData);
 
-    let studentState = true;
     function toggleStudents(type) {
-        studentState = false;
         setStudents(
             studentsData.filter((e) => {
                 return e.cohort.cohortCode.toLowerCase() === type;
