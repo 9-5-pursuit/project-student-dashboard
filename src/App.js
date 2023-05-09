@@ -27,14 +27,14 @@ function App() {
               <table className="table my-2">
                 <thead>
                   <tr>
-                    <th scope="col" className="fw-bold">
+                    <th className="col fw-bold">
                       Choose a class by start date
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="">
-                    <td scope="row">
+                    <td>
                       <a
                         onClick={() => {
                           setStudents(studentData);
@@ -46,52 +46,52 @@ function App() {
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">
+                    <td>
                       <a onClick={() => handleCohort("Winter2026")}>
                         Winter 2026
                       </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">
+                    <td>
                       <a onClick={() => handleCohort("Fall2026")}>Fall 2026</a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">
+                    <td>
                       <a onClick={() => handleCohort("Summer2026")}>
                         Summer 2026
                       </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">
+                    <td>
                       <a onClick={() => handleCohort("Spring2026")}>
                         Spring 2026
                       </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">
+                    <td>
                       <a onClick={() => handleCohort("Winter2025")}>
                         Winter 2025
                       </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">
+                    <td>
                       <a onClick={() => handleCohort("Fall2025")}>Fall 2025</a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">
+                    <td>
                       <a onClick={() => handleCohort("Summer2025")}>
                         Summer 2025
                       </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">
+                    <td>
                       <a onClick={() => handleCohort("Spring2025")}>
                         Spring 2025
                       </a>
