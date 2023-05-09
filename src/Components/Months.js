@@ -27,7 +27,6 @@ function Months({ setCards, setC, cohort }) {
                             return arr.indexOf(item) === i
                         }).map((item, i) => {
                             return <tr key={i + 1} className='border-success'>
-                                {/* <td style={{ cursor: 'pointer' }}><a onClick={() => { handleClick(item); setC(item) }}>{item.replace(/(\D)(\d)/, '$1 $2')}</a></td> */}
                                 <td style={{ cursor: 'pointer' }} onClick={() => { handleClick(item); setC(item) }}>{item.replace(/(\D)(\d)/, '$1 $2')}</td>
                             </tr>
                         })
