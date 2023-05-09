@@ -12,9 +12,12 @@ export default function StudentCards({ studentData, selectDate }) {
     }
 
     const formatData = localData.filter((element) => {
+      let localElement;
       if (element.cohort.cohortCode === formatStr) {
-        return element;
+        localElement = element;
+        //return element;
       }
+      return localElement;
     });
 
     return (
