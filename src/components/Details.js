@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { FaTimes, FaCheck } from "react-icons/fa";
+import OneonOne from "./OneonOne";
 
-function Details({ codewars, certifications, cohort }) {
+function Details({ codewars, certifications, cohort, notes }) {
   //   const [stylePercent, setStylePercent] = useState("none");
 
   function certified(certifications) {
@@ -34,7 +35,7 @@ function Details({ codewars, certifications, cohort }) {
           <li>Goal: {codewars.goal.total}</li>
           <li style={{ color: stylePercent }}>
             Percent of Goal Achieved:
-            {`${Math.floor(
+            {` ${Math.floor(
               (codewars.current.total / codewars.goal.total) * 100
             )} %`}
           </li>
@@ -68,6 +69,7 @@ function Details({ codewars, certifications, cohort }) {
           <li>Github: {certifications.github ? <FaCheck /> : <FaTimes />}</li>
         </ol>
       </section>
+      <OneonOne notes={notes} />
     </div>
   );
 }

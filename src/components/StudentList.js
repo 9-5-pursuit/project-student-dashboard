@@ -88,6 +88,7 @@ function StudentList({ originalData, cohortStudentList, cohortYear }) {
             certifications,
             codewars,
             cohort,
+            notes,
           }) => (
             <div key={id}>
               <img
@@ -111,6 +112,7 @@ function StudentList({ originalData, cohortStudentList, cohortYear }) {
                   codewars={codewars}
                   certifications={certifications}
                   cohort={cohort}
+                  notes={notes}
                 />
               )}
             </div>
