@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import Details from "./Details";
 
 function StudentList({ originalData, cohortStudentList, cohortYear }) {
-  const [showDetails, setShowDetails] = useState(false);
-  const [student, setStudent] = useState(null);
+  //   const [showDetails, setShowDetails] = useState(false);
+  const [studentDetails, setStudentDetails] = useState({});
+
   function count() {
     let num;
     if (cohortStudentList) {
@@ -66,16 +67,11 @@ function StudentList({ originalData, cohortStudentList, cohortYear }) {
   }
 
   function handleShowDetails(id) {
-    setShowDetails(true);
-    setStudent(id);
+    setStudentDetails((previousDetails) => {
+      console.log(previousDetails);
+      return { ...previousDetails, [id]: !previousDetails[id] };
+    });
   }
-
-  function handleHideDetails() {
-    setShowDetails(false);
-    setStudent(null);
-  }
-
-  console.log(student);
 
   return (
     <>
@@ -108,17 +104,15 @@ function StudentList({ originalData, cohortStudentList, cohortYear }) {
               <p>{birthdayConversion(dob)}</p>
               <p>{onTrackToGraduate(certifications, codewars)}</p>
               <button onClick={() => handleShowDetails(id)}>
-                Show More...
+                {studentDetails[id] ? <p>Show Less...</p> : <p>Show More...</p>}
               </button>
-              {showDetails && student && (
+              {studentDetails[id] && (
                 <Details
                   codewars={codewars}
                   certifications={certifications}
                   cohort={cohort}
                 />
               )}
-
-              {/* codewars, certifications, cohort */}
             </div>
           )
         )}
