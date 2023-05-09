@@ -10,6 +10,8 @@ function AllStudents({ data }) {
     const [id, setId] = useState('')
     const [form, setForm] = useState({});
     const [note, setNote] = useState(false)
+    const [hovered, setHovered] = useState(null);
+
     var num = null
 
     useEffect(() => {
@@ -55,12 +57,18 @@ function AllStudents({ data }) {
         if (item['notes'].length) setNote(true)
         else setNote(false)
     };
+
+    const handleMouseEnter = (args) => {
+        setHovered(args);
+      };
+
     return (
         <>
             {data.map((item, i) => {
                 studentScore(item)
                 return (
-                    <div className="card border-success my-1" key={item.id}>
+                    <div onMouseEnter={() => handleMouseEnter(i)}
+                    onMouseLeave={() => setHovered(null)} className={hovered===i ? 'card border-warning my-1 border-3' : "card border-success my-1"} key={item.id}>
                         <div className="row no-gutters">
                             <div className="col-md-4">
                                 <img src={item['profilePhoto']} className="post-image-w p-2" alt={item.names.preferredName} />
