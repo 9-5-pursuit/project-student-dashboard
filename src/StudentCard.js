@@ -1,23 +1,39 @@
-import React from "react";
+import React  from "react";
+import { useState } from "react";
+import GradTrack from "./GradTrack";
 function formatDate(birthDate) {
   const date = new Date(birthDate);
   const options = { month: "long", day: "numeric", year: "numeric" };
   return date.toLocaleDateString("en-US", options);
 }
+function toggleShowMore(student) {
+  
+}
+
 function StudentCard({ student }) {
   const formattedDate = formatDate(student.dob);
+  const [showMore, setShowMore] = useState(false);
+  const toggleShowMore = () => {
+    setShowMore(!showMore);
+    
+  };
   return (
     <div>
-      {student.names.preferredName}
-      <h2>All Students</h2>
-      <h3>Total Students: count</h3>
       <p>
-        {student.names.preferredName} {student.names.middleName} 
+        {student.names.preferredName} {student.names.middleName}{" "}
         {student.names.surname}
       </p>
       <p>email: {student.username} </p>
       <p>Birthday: {formattedDate}</p>
-      <image />
+      <p onClick={toggleShowMore}>
+        {showMore ? "Show Less..." : "Show More..."}
+      </p>
+      
+      <img
+        className="profile-picture"
+        src={student.profilePhoto}
+        alt="student headshots"
+      />
     </div>
   );
 }
@@ -54,7 +70,7 @@ function StudentCard({ student }) {
 //       }
 //     ],
 //     "cohort": {
-//       "cohortCode": "Winter2025",
+//       "cohortCode": "Winter 2025",
 //       "cohortStartDate": "12/1/25",
 //       "scores": {
 //         "assignments": 0.71,

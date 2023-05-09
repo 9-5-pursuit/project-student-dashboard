@@ -1,6 +1,7 @@
 import React from "react";
-
-function CohortList() {
+//onClick change title on student list to match cohort clicked 
+function CohortList(student) {
+    // const 
   return (
     <aside>
       <h2>Choose a Class by Start Date</h2>
