@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 function Students({ student }) {
     const [showMore, setShowMore] = useState(false);
@@ -62,6 +62,7 @@ function Students({ student }) {
                         <img
                             src={student.profilePhoto}
                             className="sized-img rounded"
+                            alt={student.username}
                         />
                     </div>
                     <div className="col-md-6 d-flex align-items-center">

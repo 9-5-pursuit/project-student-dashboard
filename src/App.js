@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import studentsData from "./data/data.json";
 import Student from "./Components/Student";
 import Header from "./Components/Header";
@@ -21,7 +21,7 @@ function App() {
     const years = [];
     const seasons = ["winter", "fall", "summer", "spring"];
     const semesters = [];
-    studentsData.map((element) => {
+    studentsData.forEach((element) => {
         let code = element.cohort.cohortCode.toLowerCase();
         seasons.forEach((element) => {
             code = code.replace(element, "");
@@ -34,8 +34,8 @@ function App() {
     years.sort(function (a, b) {
         return b - a;
     });
-    years.map((e) => {
-        seasons.map((s) => {
+    years.forEach((e) => {
+        seasons.forEach((s) => {
             const firstLetter = s.charAt(0);
             const firstLetterCap = firstLetter.toUpperCase();
             const remainingLetters = s.slice(1);
