@@ -1,6 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 
 export default function StudentCard({ student }) {
+  const [showMore, setShowMore] = useState(false);
+  
+  function handleButtonClick() {
+    setShowMore(!showMore);
+  }
+  
   function handleGraduation(student) {
     const certificationValues = Object.values(student.certifications);
     if (
@@ -32,24 +38,110 @@ export default function StudentCard({ student }) {
     } ${date.getDate()}, ${date.getFullYear()}`;
     return formattedDate;
   }
+
+  const studentNames = student.names;
+  const studentCodewars = student.codewars;
+  const studentCohortScores = student.cohort.scores;
+  const certifications = student.certifications;
+
+  const formatScoreAsPercentage = (score) => {
+    return `${(score * 100).toFixed(0)} %`;
+  };
+
+  function handleCertification(certification) {
+    if (certification) {
+      return <span>&#9989;</span>; // green checkmark
+    } else {
+      return <span>&#10060;</span>; // red X
+    }
+  }
   
   return (
     <div className="student">
       <h3>
-        {student.names.preferredName} {student.names.middleName.slice(0, 1)}.{" "}
-        {student.names.surname}
+        {studentNames.preferredName} {studentNames.middleName.slice(0, 1)}.{" "}
+        {studentNames.surname}
       </h3>
       <p>{student.username}</p>
-      <p>Birthday: {handleBirthday(student)}</p>
+      <p><span className="text-success">Birthday:</span> {handleBirthday(student)}</p>
       <img
         style={{ height: "150px", width: "150px" }}
         src={student.profilePhoto}
-        alt={student.names.surname}
+        alt={studentNames.surname}
       />
       <p>{handleGraduation(student)}</p>
       <div>
-        {/* Anonymous function is required to use function that was passed from app.js */}
-        <button className="showMore">Show More...</button>
+        <button
+          className="showMore btn-link border-0 bg-transparent text-success"
+          onClick={handleButtonClick}
+        >
+          {showMore ? "Show less..." : "Show more..."}
+        </button>
+        {showMore && (
+          <div className="Details">
+            <h4>Codewars:</h4>
+            <p>
+              <span className="text-success">Current Total:</span>{" "}
+              {studentCodewars.current.total}
+            </p>
+            <p>
+              <span className="text-success">Last Week:</span>{" "}
+              {studentCodewars.current.lastWeek}
+            </p>
+            <p>
+              <span className="text-success">Goal:</span>{" "}
+              {studentCodewars.goal.total}
+            </p>
+            <p>
+              <span
+                className={`${
+                  studentCodewars.current.total >= studentCodewars.goal.total
+                    ? "text-success"
+                    : studentCodewars.current.total /
+                        studentCodewars.goal.total >=
+                      0.5
+                    ? "text-warning"
+                    : "text-danger"
+                }`}
+              >
+                Percent of Goal Achieved:
+              </span>{" "}
+              {formatScoreAsPercentage(
+                studentCodewars.current.total / studentCodewars.goal.total
+              )}
+            </p>
+            <h4>Scores:</h4>
+            <p>
+              <span className="text-success">Assignments:</span>{" "}
+              {formatScoreAsPercentage(studentCohortScores.assignments)}
+            </p>
+            <p>
+              <span className="text-success">Projects:</span>{" "}
+              {formatScoreAsPercentage(studentCohortScores.projects)}
+            </p>
+            <p>
+              <span className="text-success">Assessments:</span>{" "}
+              {formatScoreAsPercentage(studentCohortScores.assessments)}
+            </p>
+            <h4>Certifications:</h4>
+            <p>
+              <span className="text-success">Resume:</span>{" "}
+              {handleCertification(certifications.resume)}
+            </p>
+            <p>
+              <span className="text-success">LinkedIn:</span>{" "}
+              {handleCertification(certifications.linkedin)}
+            </p>
+            <p>
+              <span className="text-success">Mock Interview:</span>{" "}
+              {handleCertification(certifications.mockInterview)}
+            </p>
+            <p>
+              <span className="text-success">GitHub:</span>{" "}
+              {handleCertification(certifications.github)}
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );
