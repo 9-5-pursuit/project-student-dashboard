@@ -2,6 +2,11 @@ import React, {useState} from "react";
 
 export default function StudentCard({ student }) {
   const [showMore, setShowMore] = useState(false);
+
+  const studentNames = student.names;
+  const studentCodewars = student.codewars;
+  const studentCohortScores = student.cohort.scores;
+  const certifications = student.certifications;
   
   function handleButtonClick() {
     setShowMore(!showMore);
@@ -39,11 +44,6 @@ export default function StudentCard({ student }) {
     return formattedDate;
   }
 
-  const studentNames = student.names;
-  const studentCodewars = student.codewars;
-  const studentCohortScores = student.cohort.scores;
-  const certifications = student.certifications;
-
   const formatScoreAsPercentage = (score) => {
     return `${(score * 100).toFixed(0)} %`;
   };
@@ -63,7 +63,10 @@ export default function StudentCard({ student }) {
         {studentNames.surname}
       </h3>
       <p>{student.username}</p>
-      <p><span className="text-success">Birthday:</span> {handleBirthday(student)}</p>
+      <p>
+        <span className="text-success">Birthday:</span>{" "}
+        {handleBirthday(student)}
+      </p>
       <img
         style={{ height: "150px", width: "150px" }}
         src={student.profilePhoto}
@@ -78,69 +81,103 @@ export default function StudentCard({ student }) {
           {showMore ? "Show less..." : "Show more..."}
         </button>
         {showMore && (
-          <div className="Details">
-            <h4>Codewars:</h4>
-            <p>
-              <span className="text-success">Current Total:</span>{" "}
-              {studentCodewars.current.total}
-            </p>
-            <p>
-              <span className="text-success">Last Week:</span>{" "}
-              {studentCodewars.current.lastWeek}
-            </p>
-            <p>
-              <span className="text-success">Goal:</span>{" "}
-              {studentCodewars.goal.total}
-            </p>
-            <p>
-              <span
-                className={`${
-                  studentCodewars.current.total >= studentCodewars.goal.total
-                    ? "text-success"
-                    : studentCodewars.current.total /
-                        studentCodewars.goal.total >=
-                      0.5
-                    ? "text-warning"
-                    : "text-danger"
-                }`}
+          <>
+            <div className="Details">
+              <h4>Codewars:</h4>
+              <p>
+                <span className="text-success">Current Total:</span>{" "}
+                {studentCodewars.current.total}
+              </p>
+              <p>
+                <span className="text-success">Last Week:</span>{" "}
+                {studentCodewars.current.lastWeek}
+              </p>
+              <p>
+                <span className="text-success">Goal:</span>{" "}
+                {studentCodewars.goal.total}
+              </p>
+              <p>
+                <span
+                  className={`${
+                    studentCodewars.current.total >= studentCodewars.goal.total
+                      ? "text-success"
+                      : studentCodewars.current.total /
+                          studentCodewars.goal.total >=
+                        0.5
+                      ? "text-warning"
+                      : "text-danger"
+                  }`}
+                >
+                  Percent of Goal Achieved:
+                </span>{" "}
+                {formatScoreAsPercentage(
+                  studentCodewars.current.total / studentCodewars.goal.total
+                )}
+              </p>
+              <h4>Scores:</h4>
+              <p>
+                <span className="text-success">Assignments:</span>{" "}
+                {formatScoreAsPercentage(studentCohortScores.assignments)}
+              </p>
+              <p>
+                <span className="text-success">Projects:</span>{" "}
+                {formatScoreAsPercentage(studentCohortScores.projects)}
+              </p>
+              <p>
+                <span className="text-success">Assessments:</span>{" "}
+                {formatScoreAsPercentage(studentCohortScores.assessments)}
+              </p>
+              <h4>Certifications:</h4>
+              <p>
+                <span className="text-success">Resume:</span>{" "}
+                {handleCertification(certifications.resume)}
+              </p>
+              <p>
+                <span className="text-success">LinkedIn:</span>{" "}
+                {handleCertification(certifications.linkedin)}
+              </p>
+              <p>
+                <span className="text-success">Mock Interview:</span>{" "}
+                {handleCertification(certifications.mockInterview)}
+              </p>
+              <p>
+                <span className="text-success">GitHub:</span>{" "}
+                {handleCertification(certifications.github)}
+              </p>
+            </div>
+            <form className="notes">
+              <h3>1-on-1 Notes</h3>
+              <fieldset
+                style={{
+                  border: "1px solid",
+                  padding: "20px",
+                  marginTop: "20px",
+                }}
               >
-                Percent of Goal Achieved:
-              </span>{" "}
-              {formatScoreAsPercentage(
-                studentCodewars.current.total / studentCodewars.goal.total
-              )}
-            </p>
-            <h4>Scores:</h4>
-            <p>
-              <span className="text-success">Assignments:</span>{" "}
-              {formatScoreAsPercentage(studentCohortScores.assignments)}
-            </p>
-            <p>
-              <span className="text-success">Projects:</span>{" "}
-              {formatScoreAsPercentage(studentCohortScores.projects)}
-            </p>
-            <p>
-              <span className="text-success">Assessments:</span>{" "}
-              {formatScoreAsPercentage(studentCohortScores.assessments)}
-            </p>
-            <h4>Certifications:</h4>
-            <p>
-              <span className="text-success">Resume:</span>{" "}
-              {handleCertification(certifications.resume)}
-            </p>
-            <p>
-              <span className="text-success">LinkedIn:</span>{" "}
-              {handleCertification(certifications.linkedin)}
-            </p>
-            <p>
-              <span className="text-success">Mock Interview:</span>{" "}
-              {handleCertification(certifications.mockInterview)}
-            </p>
-            <p>
-              <span className="text-success">GitHub:</span>{" "}
-              {handleCertification(certifications.github)}
-            </p>
-          </div>
+                <div>
+                  <label htmlFor="name">Commentor Name</label>
+                  <input type="text" id="name" style={{ marginLeft: "10px" }} />
+                </div>
+                <div>
+                  <label htmlFor="comment">Comment</label>
+                  <input
+                    type="text"
+                    id="comment"
+                    style={{ marginLeft: "10px", marginTop: "5px" }}
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="btn btn-success"
+                  style={{ marginTop: "10px" }}
+                >
+                  Add Note
+                </button>
+              </fieldset>
+              <ul className="notes-list"></ul>
+              <li></li>
+            </form>
+          </>
         )}
       </div>
     </div>
