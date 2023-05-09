@@ -18,7 +18,12 @@ function Details({ codewars, certifications, cohort }) {
           <li>Current Total: {codewars.current.total}</li>
           <li>Last Week: {codewars.current.lastWeek}</li>
           <li>Goal: {codewars.goal.total}</li>
-          <li></li>
+          <li>
+            Percent of Goal Achieved:{" "}
+            {`${Math.floor(
+              (codewars.current.total / codewars.goal.total) * 100
+            )} %`}
+          </li>
         </ol>
       </section>
       <section>
