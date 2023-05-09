@@ -105,6 +105,7 @@ export default function StudentCard({ students }) {
                   className="img-fluid rounded float-start p-3"
                   style={{ minwidth: "100px" }}
                   src={item.profilePhoto}
+                  alt="profile picture"
                 />
               </div>
               <div className="col">
