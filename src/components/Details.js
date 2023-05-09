@@ -1,13 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaTimes, FaCheck } from "react-icons/fa";
 
 function Details({ codewars, certifications, cohort }) {
-  //   console.log(codewars);
+  //   const [stylePercent, setStylePercent] = useState("none");
 
   function certified(certifications) {
     if (certifications.resume) {
       return "true";
     }
+  }
+
+  let stylePercent = "none";
+  let score = Math.floor((codewars.current.total / codewars.goal.total) * 100);
+  if (score > 100) {
+    stylePercent = "green";
+  }
+
+  if (score >= 50 && score < 100) {
+    stylePercent = "yellow";
+  }
+
+  if (score < 50) {
+    stylePercent = "red";
   }
 
   return (
@@ -18,8 +32,8 @@ function Details({ codewars, certifications, cohort }) {
           <li>Current Total: {codewars.current.total}</li>
           <li>Last Week: {codewars.current.lastWeek}</li>
           <li>Goal: {codewars.goal.total}</li>
-          <li>
-            Percent of Goal Achieved:{" "}
+          <li style={{ color: stylePercent }}>
+            Percent of Goal Achieved:
             {`${Math.floor(
               (codewars.current.total / codewars.goal.total) * 100
             )} %`}
@@ -29,9 +43,13 @@ function Details({ codewars, certifications, cohort }) {
       <section>
         <h3>Scores:</h3>
         <ol>
-          <li>Assignments: {`${cohort.scores.assignments * 100} %`}</li>
-          <li>Projects: {`${cohort.scores.projects * 100} %`}</li>
-          <li>Assessments: {`${cohort.scores.assessments * 100} %`}</li>
+          <li className="cohort-scores" id="active">
+            Assignments: {`${cohort.scores.assignments * 100} %`}
+          </li>
+          <li id="active">Projects: {`${cohort.scores.projects * 100} %`}</li>
+          <li id="active">
+            Assessments: {`${cohort.scores.assessments * 100} %`}
+          </li>
         </ol>
       </section>
       <section>
