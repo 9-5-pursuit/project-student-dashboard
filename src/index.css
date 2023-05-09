@@ -79,6 +79,10 @@
     grid-column: 1 / span 4;
 }
 
+.student form ul li {
+    margin: 1%
+}
+
 .student input {
     margin: 1%;
 }
