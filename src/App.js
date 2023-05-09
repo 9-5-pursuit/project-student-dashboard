@@ -16,26 +16,25 @@ function App() {
   }
 
   return (
-    <div>
-  <div className="bg-success py-4">
-    <div className="container">
-      <h1 className="text-center text-white">Student Dashboard</h1>
-    </div>
-  </div>
-      <div className="container py-2" style={{maxWidth: '90%'}}>
-      <div className="row">
-        <div className="col-sm-3 bg-light px-4"><Months setCards={setCards} setC={setC} cohort={cohort}/></div>
-        <div className="col-sm-9 px-4">
-          <div>
-            <h1>{cohort.replace(/(\D)(\d)/, '$1 $2')}</h1>
-            <p>Total Students: <span className="text-success">{data.length}</span></p>
-          </div>
-          <AllStudents data={data}/>
+    <>
+      <div className="bg-success py-4">
+        <div className="container">
+          <h1 className="text-center text-white">Student Dashboard</h1>
         </div>
-        
       </div>
-    </div>
-    </div>
+      <div className="container py-2" style={{ maxWidth: '90%' }}>
+        <div className="row">
+          <div className="col-sm-3 bg-light px-4"><Months setCards={setCards} setC={setC} cohort={cohort} /></div>
+          <div className="col-sm-9 px-4">
+            <div>
+              <h1>{cohort.replace(/(\D)(\d)/, '$1 $2')}</h1>
+              <p>Total Students: <span className="text-success">{data.length}</span></p>
+            </div>
+            <AllStudents data={data} />
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 
