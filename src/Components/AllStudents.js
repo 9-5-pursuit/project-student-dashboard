@@ -9,6 +9,7 @@ function AllStudents({ data }) {
     const [Comment, setComment] = useState('');
     const [id, setId] = useState('')
     const [form, setForm] = useState({});
+    const [note, setNote] = useState(false)
     var num = null
 
     useEffect(() => {
@@ -20,7 +21,7 @@ function AllStudents({ data }) {
         if (!Name || !Comment) return
         //store form data in state form object
         //prevents duplicate Notes
-        setForm((prevState) => ({ ...prevState, [id]: [...new Set([...(prevState[id] || []), Name + ' says, ' + Comment])] }))
+        setForm((prevState) => ({ ...prevState, [id]: [...new Set([...(prevState[id] || []), Name + ' says, "' + Comment + '"'])] }))
         setName('')
         setComment('')
 
@@ -48,8 +49,11 @@ function AllStudents({ data }) {
         num = Math.round((args['codewars']['current']['total'] / args['codewars']['goal']['total']) * 100)
     }
 
-    const handleCardExpand = (args) => {
+    const handleCardExpand = (args, item) => {
         setIndex(index === args ? null : args);
+        //handle if notes already exist is datajson
+        if (item['notes'].length) setNote(true)
+        else setNote(false)
     };
     return (
         <>
@@ -66,7 +70,7 @@ function AllStudents({ data }) {
                                     <h5 className="card-title">{Object.values(item['names']).join(' ')}</h5>
                                     <p className="card-text">{item['username']}</p>
                                     <p className="card-text"><span className='text-success'>Birthday:</span> {makeDate(item['dob'])}</p>
-                                    <a style={{ cursor: 'pointer' }} className="pointer" onClick={() => { handleCardExpand(i); setId(item.id) }}>{index === i ? 'Show Less..' : 'Show More..'}</a>
+                                    <a style={{ cursor: 'pointer' }} className="pointer" onClick={() => { handleCardExpand(i, item); setId(item.id); }}>{index === i ? 'Show Less..' : 'Show More..'}</a>
                                 </div>
                             </div>
                             <div className="col-md-4 px-0">
@@ -122,6 +126,7 @@ function AllStudents({ data }) {
                                         </form>
                                     </div>
                                     <ul>
+                                        {note && item['notes'].map(item => <li key={generateId()}>{item['commenter'] + ' says, ' + item['comment']}</li>)}
                                         {form[id] && (
                                             form[id].map((item) => {
                                                 return <li key={generateId()}>
