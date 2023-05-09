@@ -16,21 +16,21 @@ function Months({ setCards, setC, cohort }) {
                 </thead>
                 <tbody>
                     <tr key={0} className='border-success'>
-                        <td style={{ cursor: 'pointer' }}><a onClick={() => { setCards(sData); setC('All Students') }}>All Students</a></td>
+                        <td style={{ cursor: 'pointer' }} onClick={() => { setCards(sData); setC('All Students') }}>All Students</td>
                     </tr>
                     {
-                        sData.map(item => item.cohort.cohortCode + ',' + item.cohort.cohortStartDate).
-                            sort((a, b) => {
-                                const cohortCodeA = new Date(a.split(',')[1]);
-                                const cohortCodeB = new Date(b.split(',')[1]);
-                                return cohortCodeA - cohortCodeB;
-                            }).map(item => item.split(',')[0]).filter((item, i, arr) => {
-                                return arr.indexOf(item) === i
-                            }).map((item, i) => {
-                                return <tr key={i + 1} className='border-success'>
-                                    <td style={{ cursor: 'pointer' }}><a onClick={() => { handleClick(item); setC(item) }}>{item.replace(/(\D)(\d)/, '$1 $2')}</a></td>
-                                </tr>
-                            })
+                        sData.map(item => item.cohort.cohortCode + ',' + item.cohort.cohortStartDate).sort((a, b) => {
+                            const cohortCodeA = new Date(a.split(',')[1]);
+                            const cohortCodeB = new Date(b.split(',')[1]);
+                            return cohortCodeA - cohortCodeB;
+                        }).map(item => item.split(',')[0]).filter((item, i, arr) => {
+                            return arr.indexOf(item) === i
+                        }).map((item, i) => {
+                            return <tr key={i + 1} className='border-success'>
+                                {/* <td style={{ cursor: 'pointer' }}><a onClick={() => { handleClick(item); setC(item) }}>{item.replace(/(\D)(\d)/, '$1 $2')}</a></td> */}
+                                <td style={{ cursor: 'pointer' }} onClick={() => { handleClick(item); setC(item) }}>{item.replace(/(\D)(\d)/, '$1 $2')}</td>
+                            </tr>
+                        })
                     }
                 </tbody>
             </table>

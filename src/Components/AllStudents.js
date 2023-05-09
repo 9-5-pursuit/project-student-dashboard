@@ -63,14 +63,14 @@ function AllStudents({ data }) {
                     <div className="card border-success my-1" key={item.id}>
                         <div className="row no-gutters">
                             <div className="col-md-4">
-                                <img src={item['profilePhoto']} className="post-image-w p-2" alt="Your image alt text here" />
+                                <img src={item['profilePhoto']} className="post-image-w p-2" alt={item.names.preferredName} />
                             </div>
                             <div className="col-md-4 px-0">
                                 <div className="card-body">
                                     <h5 className="card-title">{Object.values(item['names']).join(' ')}</h5>
                                     <p className="card-text">{item['username']}</p>
                                     <p className="card-text"><span className='text-success'>Birthday:</span> {makeDate(item['dob'])}</p>
-                                    <a style={{ cursor: 'pointer' }} className="pointer" onClick={() => { handleCardExpand(i, item); setId(item.id); }}>{index === i ? 'Show Less..' : 'Show More..'}</a>
+                                    <button type='button' className="btn btn-link text-success" onClick={() => { handleCardExpand(i, item); setId(item.id); }}>{index === i ? 'Show Less..' : 'Show More..'}</button>
                                 </div>
                             </div>
                             <div className="col-md-4 px-0">
