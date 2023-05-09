@@ -33,68 +33,50 @@ function App() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr className="">
-                    <td>
-                      <a
-                        onClick={() => {
-                          setStudents(studentData);
-                          setCohortYear("All Students");
-                        }}
-                      >
-                        All Students
-                      </a>
+                  <tr>
+                    <td
+                      onClick={() => {
+                        setStudents(studentData);
+                        setCohortYear("All Students");
+                      }}
+                    >
+                      All Students
                     </td>
                   </tr>
                   <tr>
-                    <td>
-                      <a onClick={() => handleCohort("Winter2026")}>
-                        Winter 2026
-                      </a>
+                    <td onClick={() => handleCohort("Winter2026")}>
+                      Winter 2026
                     </td>
                   </tr>
                   <tr>
-                    <td>
-                      <a onClick={() => handleCohort("Fall2026")}>Fall 2026</a>
+                    <td onClick={() => handleCohort("Fall2026")}>Fall 2026</td>
+                  </tr>
+                  <tr>
+                    <td onClick={() => handleCohort("Summer2026")}>
+                      Summer 2026
                     </td>
                   </tr>
                   <tr>
-                    <td>
-                      <a onClick={() => handleCohort("Summer2026")}>
-                        Summer 2026
-                      </a>
+                    <td onClick={() => handleCohort("Spring2026")}>
+                      Spring 2026
                     </td>
                   </tr>
                   <tr>
-                    <td>
-                      <a onClick={() => handleCohort("Spring2026")}>
-                        Spring 2026
-                      </a>
+                    <td onClick={() => handleCohort("Winter2025")}>
+                      Winter 2025
                     </td>
                   </tr>
                   <tr>
-                    <td>
-                      <a onClick={() => handleCohort("Winter2025")}>
-                        Winter 2025
-                      </a>
+                    <td onClick={() => handleCohort("Fall2025")}>Fall 2025</td>
+                  </tr>
+                  <tr>
+                    <td onClick={() => handleCohort("Summer2025")}>
+                      Summer 2025
                     </td>
                   </tr>
                   <tr>
-                    <td>
-                      <a onClick={() => handleCohort("Fall2025")}>Fall 2025</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <a onClick={() => handleCohort("Summer2025")}>
-                        Summer 2025
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <a onClick={() => handleCohort("Spring2025")}>
-                        Spring 2025
-                      </a>
+                    <td onClick={() => handleCohort("Spring2025")}>
+                      Spring 2025
                     </td>
                   </tr>
                 </tbody>

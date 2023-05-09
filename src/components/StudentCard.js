@@ -105,7 +105,7 @@ export default function StudentCard({ students }) {
                   className="img-fluid rounded float-start p-3"
                   style={{ minwidth: "100px" }}
                   src={item.profilePhoto}
-                  alt="profile picture"
+                  alt={item.names.preferredName}
                 />
               </div>
               <div className="col">
@@ -119,23 +119,25 @@ export default function StudentCard({ students }) {
                   {formatBirthday(item.dob)}
                 </p>
                 {indexState !== index ? (
-                  <a
-                    className="text-success"
+                  <button
+                    type="button"
+                    class="btn btn-link text-success"
                     onClick={() => {
                       setIndexState(index);
                     }}
                   >
                     Show more...
-                  </a>
+                  </button>
                 ) : (
-                  <a
-                    className="text-success"
+                  <button
+                    type="button"
+                    class="btn btn-link text-success"
                     onClick={() => {
                       setIndexState(null);
                     }}
                   >
                     Show less...
-                  </a>
+                  </button>
                 )}
               </div>
               <div className="col">{handleOntrack(item)}</div>
