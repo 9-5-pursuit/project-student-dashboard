@@ -1,0 +1,21 @@
+.container-95 {
+    max-width: 95%;
+}
+.sized-img {
+    width: 75px;
+}
+.width-33 {
+    width: 33%;
+}
+.width-45 {
+    width: 45%;
+}
+.width-35 {
+    width: 35%;
+}
+.width-20 {
+    width: 20%;
+}
+.link:hover {
+    color: green;
+}
