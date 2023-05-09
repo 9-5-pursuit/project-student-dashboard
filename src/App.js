@@ -3,9 +3,13 @@ import data from "./data/data.json";
 import Header from "./Components/Header";
 import Aside from "./Components/Aside";
 import Main from "./Components/Main";
+import header from "./Components/header.css";
+import aside from "./Components/aside.css";
+import filteredStudents from "./Components/filteredStudents.css";
+import kpi from "./Components/kpi.css";
 
 function App() {
-  const [studentsList, setStudentsList] = (useState = data);
+  const [studentsList, setStudentsList] = useState(data);
   const [studentsByCode, setStudentsByCode] = useState(handleStuByCohortCode());
 
   const [selectedCohort, setSelectedCohort] = useState("");

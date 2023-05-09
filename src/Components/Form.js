@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 const Form = (student) => {
-  const [userInput, setUserInput] = useState({ commenter: "", comment: "" });
+  const [userInput, setUserInput] = useState({ commenter: '', comment: '' });
 
   return (
     <div className="notes">
