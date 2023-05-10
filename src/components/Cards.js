@@ -67,18 +67,18 @@ function Cards({
                           <span>On Track To Graduate</span>
                         </p>
                       ) : null}
-                      <p>
-                        <button
-                          className="btn  btn-link text-decoration-none"
-                          data-bs-toggle="collapse"
-                          href={"#" + id}
-                          role="button"
-                          aria-expanded="false"
-                          aria-controls="collapseExample"
-                        >
-                          <span onClickCapture={toggleShow}>Show More...</span>
-                        </button>
-                      </p>
+
+                      <button
+                        className="btn  btn-link text-decoration-none"
+                        data-bs-toggle="collapse"
+                        href={"#" + id}
+                        role="button"
+                        aria-expanded="false"
+                        aria-controls="collapseExample"
+                      >
+                        <span onClickCapture={toggleShow}>Show More...</span>
+                      </button>
+
                       <div className="collapse" id={id}>
                         <div className="card-body">
                           <table className="table table-hover">

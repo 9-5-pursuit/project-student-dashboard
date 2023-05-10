@@ -7,28 +7,26 @@ function CohortList({ setCardCohort, cohortList, handleTitle, setTitle }) {
 
       <ul className="list-group list-group-flush">
         <li className="list-group-item fw-bold">
-          <a
-            className="text-decoration-none text-dark"
-            href="#"
+          <button
+            className="btn btn-link text-decoration-none text-dark"
             onClick={() => setCardCohort("All Students")}
           >
             <div onClick={(e) => setTitle(e.target.innerHTML)}>
               All Students
             </div>
-          </a>
+          </button>
         </li>
 
         {cohortList().map(({ cohortCode, cohortName }) => {
           return (
             <li key={Math.random()} className="list-group-item fw-bold">
-              <a
-                className="text-decoration-none text-dark"
+              <button
+                className="btn btn-link text-decoration-none text-dark"
                 onClick={handleTitle}
-                href="#"
                 id={cohortCode}
               >
                 {cohortName}
-              </a>
+              </button>
             </li>
           );
         })}
