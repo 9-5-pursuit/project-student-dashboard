@@ -171,7 +171,7 @@ function AllStudents({ selectedStudents }) {
         {onTrackToGraduate(student.certifications, student.codewars) ===
           true && <p className="ontrack">On Track To Graduate</p>}
 
-        <a onClick={() => toggleDetails(student.id)}>
+        <a href="" onClick={() => toggleDetails(student.id)}>
           {showDetails ? "Show Less..." : "Show More..."}
         </a>
 

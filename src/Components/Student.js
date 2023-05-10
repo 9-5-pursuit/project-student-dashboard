@@ -5,7 +5,7 @@ function singleStudent({ username, profilePhoto, names, dob, id }) {
 
   return (
     <>
-      <img src={profilePhoto} alt="picture" className="pic" />
+      <img src={profilePhoto} alt="" className="pic" />
       <div>
         <h5>
           {preferredName} {middleName.charAt(0)} {surname}
