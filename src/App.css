@@ -1,0 +1,14 @@
+.title {
+   text-align: center;
+   background-color: green;
+   color: white;
+   margin: 0%;
+   padding: 30px 10px ;
+}
+
+.container {
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+   grid-gap: 20px;
+}
+
