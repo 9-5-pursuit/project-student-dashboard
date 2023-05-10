@@ -1,0 +1,127 @@
+.App-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+header {
+  text-align: center;
+  color: azure;
+  background-color: #24292e;
+}
+.cohort-list {
+  grid-column: 1 / span 1;
+}
+.cohort-list li:hover {
+  color: lightgreen;
+}
+
+.student-list {
+  grid-column: 2 / span 1;
+}
+.student {
+  border-radius: 10px;
+  border: 5px solid lightblue;
+  padding: 10px;
+  display: flex;
+}
+
+.student img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+.student-details {
+  margin-top: 10px;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.codewars-container,
+.scores-container,
+.certifications-container,
+.form-container,
+.notes-container {
+  margin-bottom: 10px;
+}
+
+.resume-check,
+.linkedin-check,
+.github-check,
+.interview-check {
+  display: inline-block;
+  width: 100px;
+  font-weight: bold;
+}
+
+.resume-check::before,
+.linkedin-check::before,
+.github-check::before,
+.interview-check::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.resume-check::before {
+  background-color: #42b983;
+}
+
+.linkedin-check::before {
+  background-color: #0077b5;
+}
+
+.github-check::before {
+  background-color: #24292e;
+}
+
+.interview-check::before {
+  background-color: #f1c40f;
+}
+
+.form-container {
+  border: 1px solid black;
+  position: relative;
+}
+.form-container button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+button {
+  background-color: #3498db;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+button:focus {
+  outline: none;
+}
