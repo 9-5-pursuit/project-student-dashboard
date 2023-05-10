@@ -1,5 +1,5 @@
 import React from "react";
-import studentData from "/Users/karmaghale/Desktop/project-student-dashboard/src/data/data.json";
+import studentData from "../data/data.json";
 
 const uniqueClass = studentData.reduce((accumulator, currentValue) => {
   if (!accumulator[currentValue.cohort.cohortCode]) {

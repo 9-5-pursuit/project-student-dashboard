@@ -115,6 +115,7 @@ function AllStudents({ selectedStudents }) {
 
           <div className="notes">
             <h4>1-on-1 Notes</h4>
+
             <form onSubmit={(event) => handleSubmit(event, student.id)}>
               <label htmlFor="name">Commenter Name</label>
               <input type="text" id="name" /> <br />
@@ -123,6 +124,7 @@ function AllStudents({ selectedStudents }) {
               <br />
               <button>Add Note</button>
             </form>
+
             <ul>
               {notes[student.id] && notes[student.id + "a"] && (
                 <li>
@@ -159,24 +161,22 @@ function AllStudents({ selectedStudents }) {
   return selectedStudents.map((student) => {
     const showDetails = student.id === selectedStudentID;
     return (
-      <>
-        <div className="singleStudent" key={student.id}>
-          <Student
-            dob={formatDate(student.dob)}
-            profilePhoto={student.profilePhoto}
-            names={student.names}
-            username={student.username}
-          />
-          {onTrackToGraduate(student.certifications, student.codewars) ===
-            true && <p className="ontrack">On Track To Graduate</p>}
+      <div className="singleStudent" key={student.id}>
+        <Student
+          dob={formatDate(student.dob)}
+          profilePhoto={student.profilePhoto}
+          names={student.names}
+          username={student.username}
+        />
+        {onTrackToGraduate(student.certifications, student.codewars) ===
+          true && <p className="ontrack">On Track To Graduate</p>}
 
-          <a onClick={() => toggleDetails(student.id)}>
-            {showDetails ? "Show Less..." : "Show More..."}
-          </a>
+        <a onClick={() => toggleDetails(student.id)}>
+          {showDetails ? "Show Less..." : "Show More..."}
+        </a>
 
-          {showDetails && getStudentDetails(student.id)}
-        </div>
-      </>
+        {showDetails && getStudentDetails(student.id)}
+      </div>
     );
   });
 }

@@ -1,7 +1,8 @@
-import studentData from "./data/data.json";
+import studentData from "./data/data";
 import Students from "./Components/Students";
 import Cohorts from "./Components/Cohorts";
 import { useState } from "react";
+
 import "./index.css";
 
 function App() {
