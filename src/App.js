@@ -13,7 +13,7 @@ function App() {
 
   // Sort cohorts
   const sortedCohorts = uniqueCohorts.sort((a, b) => {
-    const seasonOrder = { Spring: 1, Summer: 2, Winter: 3, Fall: 4 };
+    const seasonOrder = { Spring: 1, Summer: 2, Fall: 3, Winter: 4 };
     const aYear = a.slice(-4);
     const aSeason = a.slice(0, -4);
     const bYear = b.slice(-4);
