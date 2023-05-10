@@ -5,16 +5,8 @@ header {
   text-align: center;
 }
 
-aside {
-  border: solid 2px rgb(177, 114, 114);
-}
-
 .list-group-item {
   border: solid #5c946e 3px;
-}
-
-main {
-  border: solid 2px lightblue;
 }
 
 span {
@@ -39,4 +31,20 @@ span {
 
 .red {
   color: red;
+}
+
+li {
+  list-style-type: none;
+}
+
+.cohort-title {
+  text-align: center;
+}
+
+.img-div {
+  padding: 15%;
+}
+
+.card-body {
+  margin-top: 80px;
 }
