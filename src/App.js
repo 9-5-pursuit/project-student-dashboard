@@ -41,7 +41,9 @@ function App() {
 
         <h3 className="chooseClass">Choose a Class by Start Date</h3>
         <div className="allCohorts">
-          <h4 onClick={handleAllStudents}>All Students</h4>
+          <h4 className="h4Hover" onClick={handleAllStudents}>
+            All Students
+          </h4>
           <Cohorts filterStudents={filterStudents} />
         </div>
       </div>

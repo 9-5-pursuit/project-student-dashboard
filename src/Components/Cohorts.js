@@ -27,7 +27,11 @@ function Cohorts({ filterStudents }) {
     <>
       {sortedUniqueClassArray.map((eachClass) => {
         return (
-          <h4 key={eachClass} onClick={() => filterStudents(eachClass)}>
+          <h4
+            className="h4Hover"
+            key={eachClass}
+            onClick={() => filterStudents(eachClass)}
+          >
             {eachClass}
           </h4>
         );
