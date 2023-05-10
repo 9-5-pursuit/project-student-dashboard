@@ -4,7 +4,7 @@ function CohortOrderButton({ cohortList, setCohortList }) {
   // state for descend/ascend
   const [buttonClick, setButtonClick] = useState(false);
 
-  function handleButtonOnClick() {
+  function handleOrder() {
     const spreadArr = [...cohortList];
     const allStudents = spreadArr.shift();
     spreadArr.reverse().unshift(allStudents);
@@ -15,7 +15,7 @@ function CohortOrderButton({ cohortList, setCohortList }) {
     <button
       className="cohortButton"
       onClick={() => {
-        handleButtonOnClick();
+        handleOrder();
       }}
     >
       {buttonClick ? "Descending Order" : "Ascending Order"}

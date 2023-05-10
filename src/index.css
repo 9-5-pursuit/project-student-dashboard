@@ -1,0 +1,155 @@
+img {
+  width: 100px;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 5px;
+}
+
+.topLevel {
+  display: grid;
+  row-gap: 40px;
+}
+
+header {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  background-color: rgb(60, 211, 231);
+  color: rgb(33, 68, 144);
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: 2fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+h1 {
+  width: 50%;
+  margin: 0 auto;
+  grid-column: 2;
+  text-align: center;
+}
+
+main {
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 1.2fr 2fr;
+}
+
+.studentList {
+  grid-column: 2;
+  margin-left: 20px;
+  row-gap: 15px;
+  display: grid;
+  grid-template-rows: max-content;
+}
+
+.studentListHeader {
+  text-align: center;
+}
+
+.scrollStudents {
+  height: 90vh;
+  overflow-y: scroll;
+}
+
+.student {
+  display: block;
+  justify-items: center;
+  width: 90%;
+  margin-left: 20px;
+  margin-top: 10px;
+  border: 2px solid rgb(47, 122, 47);
+}
+
+.studentInfo {
+  display: flex;
+}
+
+aside {
+  display: block;
+  justify-items: center;
+  align-items: center;
+}
+.cohortList {
+  grid-column: 1;
+  grid-row: 1;
+  margin-left: 20px;
+}
+.cohortList h2 {
+  text-align: center;
+}
+
+.cohort span:hover {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+footer {
+  justify-self: center;
+}
+
+.showMore {
+  margin-left: 40%;
+}
+
+.studentCohortLink {
+  color: rgb(33, 68, 144);
+  font-weight: bolder;
+}
+a {
+  text-decoration: underline;
+  color: rgb(70, 120, 228);
+}
+a:hover {
+  cursor: pointer;
+}
+
+.studentStats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.studentStats div,
+.notes div form {
+  margin-left: 10px;
+}
+.studentStats span {
+  color: rgb(3, 30, 120);
+}
+hr {
+  height: 1px;
+  color: rgb(3, 30, 120);
+  background: rgb(60, 211, 231);
+  width: 90%;
+}
+
+.Notes {
+  display: grid;
+  justify-items: flex-start;
+  margin-left: 20px;
+}
+.form {
+  border: 1px solid black;
+  width: 90%;
+}
+form {
+  display: block;
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+input {
+  margin-top: 10px;
+}
+
+/* Graduation */
+.Graduate {
+  color: rgb(3, 30, 120);
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.cohortButton {
+  background-color: rgb(60, 211, 231);
+  color: rgb(3, 30, 120);
+  margin-left: 35%;
+}
