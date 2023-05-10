@@ -49,7 +49,7 @@ export default function Cohortlist({
   return (
     <div>
       <h2>Choose a Class by Start Date</h2>
-      <ul className="list-unstyled list-group">
+      <ul className="list-unstyled list-group cohort-list">
         {/* Anonymous function is required to use function that was passed from app.js */}
         <li onClick={() => handleAllStudents()}>All Students</li>
         {cohortStartDates.map((cohortCode) => (

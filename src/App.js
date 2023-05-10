@@ -14,7 +14,6 @@ const [currentClass, setCurrentClass] = useState("All Students")
         <h1>Student Dashboard</h1>
       </header>
 
-      <main>
         <aside className="cohort-container">
           <CohortList
             students={studentData}
@@ -26,14 +25,13 @@ const [currentClass, setCurrentClass] = useState("All Students")
         
         <div className="students-container">
           <h2>{currentClass}</h2>
-          <p>Total Students: {total}</p>
+          <p>Total Students: <span className="text-success">{total}</span></p>
           {students.map((student) => (
             <div className="studentCard" key={student.id}>
               <StudentCard student={student} />
             </div>
           ))}
         </div>
-      </main>
     </div>
   );
 }

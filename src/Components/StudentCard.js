@@ -2,16 +2,17 @@ import React, {useState} from "react";
 
 export default function StudentCard({ student }) {
   const [showMore, setShowMore] = useState(false);
+  const [showNote, setShowNote] = useState(student.notes);
 
   const studentNames = student.names;
   const studentCodewars = student.codewars;
   const studentCohortScores = student.cohort.scores;
   const certifications = student.certifications;
-  
+
   function handleButtonClick() {
     setShowMore(!showMore);
   }
-  
+
   function handleGraduation(student) {
     const certificationValues = Object.values(student.certifications);
     if (
@@ -55,9 +56,25 @@ export default function StudentCard({ student }) {
       return <span>&#10060;</span>; // red X
     }
   }
-  
+
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
+
+  function handleTextChange(event) {
+    const newNote = event.target.value;
+    setShowNote((prevNotes) => [...prevNotes, newNote]);
+  }
+
   return (
-    <div className="student">
+    <div
+      className="student"
+      style={{
+        border: "1px solid green",
+        padding: "20px",
+        marginTop: "20px",
+      }}
+    >
       <h3>
         {studentNames.preferredName} {studentNames.middleName.slice(0, 1)}.{" "}
         {studentNames.surname}
@@ -72,7 +89,7 @@ export default function StudentCard({ student }) {
         src={student.profilePhoto}
         alt={studentNames.surname}
       />
-      <p>{handleGraduation(student)}</p>
+      <p className="text-success">{handleGraduation(student)}</p>
       <div>
         <button
           className="showMore btn-link border-0 bg-transparent text-success"
@@ -145,7 +162,7 @@ export default function StudentCard({ student }) {
                 {handleCertification(certifications.github)}
               </p>
             </div>
-            <form className="notes">
+            <form className="Notes" onSubmit={handleSubmit}>
               <h3>1-on-1 Notes</h3>
               <fieldset
                 style={{
@@ -155,15 +172,21 @@ export default function StudentCard({ student }) {
                 }}
               >
                 <div>
-                  <label htmlFor="name">Commentor Name</label>
-                  <input type="text" id="name" style={{ marginLeft: "10px" }} />
+                  <label htmlFor="name">Commenter Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    style={{ marginLeft: "10px" }}
+                    onChange={handleTextChange}
+                  />
                 </div>
                 <div>
                   <label htmlFor="comment">Comment</label>
                   <input
                     type="text"
-                    id="comment"
+                    id="comment"                 
                     style={{ marginLeft: "10px", marginTop: "5px" }}
+                    onChange={handleTextChange}
                   />
                 </div>
                 <button
