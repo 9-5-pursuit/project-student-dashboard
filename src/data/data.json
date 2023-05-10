@@ -1,3 +1,4 @@
+
 [
   {
     "id": "D8-hEWB",
@@ -67,7 +68,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -104,7 +107,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -141,7 +146,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -178,7 +185,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2025",
       "cohortStartDate": "3/1/25",
@@ -215,7 +224,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2025",
       "cohortStartDate": "9/1/25",
@@ -252,7 +263,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -289,7 +302,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -326,7 +341,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -363,7 +380,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -400,7 +419,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -437,7 +458,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -474,7 +497,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -511,7 +536,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -548,7 +575,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -585,7 +614,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2025",
       "cohortStartDate": "3/1/25",
@@ -622,7 +653,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -659,7 +692,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -696,7 +731,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -733,7 +770,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -770,7 +809,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -807,7 +848,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -844,7 +887,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -881,7 +926,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2025",
       "cohortStartDate": "3/1/25",
@@ -918,7 +965,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -955,7 +1004,9 @@
       "github": true,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2025",
       "cohortStartDate": "9/1/25",
@@ -992,7 +1043,9 @@
       "github": true,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -1029,7 +1082,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2025",
       "cohortStartDate": "3/1/25",
@@ -1066,7 +1121,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -1103,7 +1160,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -1140,7 +1199,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -1177,7 +1238,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2025",
       "cohortStartDate": "3/1/25",
@@ -1214,7 +1277,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -1251,7 +1316,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -1288,7 +1355,9 @@
       "github": false,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2025",
       "cohortStartDate": "3/1/25",
@@ -1325,7 +1394,9 @@
       "github": false,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2025",
       "cohortStartDate": "3/1/25",
@@ -1362,7 +1433,9 @@
       "github": true,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -1399,7 +1472,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -1436,7 +1511,9 @@
       "github": false,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -1473,7 +1550,9 @@
       "github": true,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -1510,7 +1589,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -1547,7 +1628,9 @@
       "github": false,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2025",
       "cohortStartDate": "3/1/25",
@@ -1584,7 +1667,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -1621,7 +1706,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -1658,7 +1745,9 @@
       "github": true,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -1695,7 +1784,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -1732,7 +1823,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -1769,7 +1862,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -1806,7 +1901,9 @@
       "github": true,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -1843,7 +1940,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2025",
       "cohortStartDate": "9/1/25",
@@ -1880,7 +1979,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -1917,7 +2018,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -1954,7 +2057,9 @@
       "github": false,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -1991,7 +2096,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -2028,7 +2135,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -2065,7 +2174,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -2102,7 +2213,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -2139,7 +2252,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -2176,7 +2291,9 @@
       "github": true,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2025",
       "cohortStartDate": "9/1/25",
@@ -2213,7 +2330,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -2250,7 +2369,9 @@
       "github": false,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -2287,7 +2408,9 @@
       "github": false,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -2324,7 +2447,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -2361,7 +2486,9 @@
       "github": false,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -2398,7 +2525,9 @@
       "github": true,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2025",
       "cohortStartDate": "3/1/25",
@@ -2435,7 +2564,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -2472,7 +2603,9 @@
       "github": false,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2025",
       "cohortStartDate": "3/1/25",
@@ -2509,7 +2642,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -2546,7 +2681,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -2583,7 +2720,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2025",
       "cohortStartDate": "9/1/25",
@@ -2620,7 +2759,9 @@
       "github": false,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -2657,7 +2798,9 @@
       "github": false,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -2694,7 +2837,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -2731,7 +2876,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -2768,7 +2915,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -2805,7 +2954,9 @@
       "github": true,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -2842,7 +2993,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -2879,7 +3032,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -2916,7 +3071,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -2953,7 +3110,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -2990,7 +3149,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -3027,7 +3188,9 @@
       "github": false,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -3064,7 +3227,9 @@
       "github": false,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -3101,7 +3266,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -3138,7 +3305,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "7/1/26",
@@ -3175,7 +3344,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -3212,7 +3383,9 @@
       "github": false,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -3249,7 +3422,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -3286,7 +3461,9 @@
       "github": false,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -3323,7 +3500,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2025",
       "cohortStartDate": "9/1/25",
@@ -3360,7 +3539,9 @@
       "github": false,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -3397,7 +3578,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -3434,7 +3617,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -3471,7 +3656,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2025",
       "cohortStartDate": "9/1/25",
@@ -3508,7 +3695,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -3545,7 +3734,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -3582,7 +3773,9 @@
       "github": true,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -3619,7 +3812,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -3656,7 +3851,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -3693,7 +3890,9 @@
       "github": false,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2025",
       "cohortStartDate": "9/1/25",
@@ -3730,7 +3929,9 @@
       "github": false,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -3767,7 +3968,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -3804,7 +4007,9 @@
       "github": true,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2025",
       "cohortStartDate": "9/1/25",
@@ -3841,7 +4046,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -3878,7 +4085,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -3915,7 +4124,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -3952,7 +4163,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2025",
       "cohortStartDate": "3/1/25",
@@ -3989,7 +4202,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -4026,7 +4241,9 @@
       "github": false,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -4063,7 +4280,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -4100,7 +4319,9 @@
       "github": false,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2025",
       "cohortStartDate": "9/1/25",
@@ -4137,7 +4358,9 @@
       "github": false,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -4174,7 +4397,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -4211,7 +4436,9 @@
       "github": true,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2025",
       "cohortStartDate": "3/1/25",
@@ -4248,7 +4475,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -4285,7 +4514,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -4322,7 +4553,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -4359,7 +4592,9 @@
       "github": false,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2025",
       "cohortStartDate": "9/1/25",
@@ -4396,7 +4631,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2025",
       "cohortStartDate": "9/1/25",
@@ -4433,7 +4670,9 @@
       "github": false,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -4470,7 +4709,9 @@
       "github": true,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -4507,7 +4748,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -4544,7 +4787,9 @@
       "github": false,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -4581,7 +4826,9 @@
       "github": true,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2025",
       "cohortStartDate": "9/1/25",
@@ -4618,7 +4865,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -4655,7 +4904,9 @@
       "github": true,
       "mockInterview": false
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -4692,7 +4943,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2025",
       "cohortStartDate": "3/1/25",
@@ -4729,7 +4982,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2025",
       "cohortStartDate": "3/1/25",
@@ -4766,7 +5021,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -4803,7 +5060,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -4840,7 +5099,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -4877,7 +5138,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2025",
       "cohortStartDate": "3/1/25",
@@ -4914,7 +5177,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -4951,7 +5216,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -4988,7 +5255,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2025",
       "cohortStartDate": "9/1/25",
@@ -5025,7 +5294,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -5062,7 +5333,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -5099,7 +5372,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -5136,7 +5411,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -5173,7 +5450,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "10/1/26",
@@ -5210,7 +5489,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -5247,7 +5528,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -5284,7 +5567,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -5321,7 +5606,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2025",
       "cohortStartDate": "9/1/25",
@@ -5358,7 +5645,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2025",
       "cohortStartDate": "3/1/25",
@@ -5395,7 +5684,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -5432,7 +5723,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -5469,7 +5762,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -5506,7 +5801,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -5543,7 +5840,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -5580,7 +5879,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2025",
       "cohortStartDate": "9/1/25",
@@ -5617,7 +5918,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2025",
       "cohortStartDate": "3/1/25",
@@ -5654,7 +5957,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -5691,7 +5996,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -5728,7 +6035,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2025",
       "cohortStartDate": "9/1/25",
@@ -5765,7 +6074,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -5802,7 +6113,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -5839,7 +6152,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -5876,7 +6191,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -5913,7 +6230,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -5950,7 +6269,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -5987,7 +6308,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -6024,7 +6347,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -6061,7 +6386,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -6098,7 +6425,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -6135,7 +6464,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -6172,7 +6503,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -6209,7 +6542,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -6246,7 +6581,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -6283,7 +6620,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -6320,7 +6659,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -6357,7 +6698,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2025",
       "cohortStartDate": "9/1/25",
@@ -6394,7 +6737,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -6431,7 +6776,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -6468,7 +6815,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -6505,7 +6854,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2025",
       "cohortStartDate": "3/1/25",
@@ -6542,7 +6893,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -6579,7 +6932,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2025",
       "cohortStartDate": "3/1/25",
@@ -6616,7 +6971,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -6653,7 +7010,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -6690,7 +7049,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -6727,7 +7088,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -6764,7 +7127,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -6801,7 +7166,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -6838,7 +7205,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -6875,7 +7244,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -6912,7 +7283,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -6949,7 +7322,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2025",
       "cohortStartDate": "3/1/25",
@@ -6986,7 +7361,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -7023,7 +7400,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -7060,7 +7439,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2025",
       "cohortStartDate": "9/1/25",
@@ -7097,7 +7478,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -7134,7 +7517,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -7171,7 +7556,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -7208,7 +7595,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -7245,7 +7634,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -7282,7 +7673,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -7319,7 +7712,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -7356,7 +7751,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -7393,7 +7790,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -7430,7 +7829,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2025",
       "cohortStartDate": "9/1/25",
@@ -7467,7 +7868,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -7504,7 +7907,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -7541,7 +7946,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -7578,7 +7985,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -7615,7 +8024,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2025",
       "cohortStartDate": "3/1/25",
@@ -7652,7 +8063,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2025",
       "cohortStartDate": "9/1/25",
@@ -7689,7 +8102,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -7726,7 +8141,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -7763,7 +8180,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2025",
       "cohortStartDate": "3/1/25",
@@ -7800,7 +8219,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2025",
       "cohortStartDate": "3/1/25",
@@ -7837,7 +8258,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -7874,7 +8297,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -7911,7 +8336,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -7948,7 +8375,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -7985,7 +8414,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -8022,7 +8453,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -8059,7 +8492,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -8096,7 +8531,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -8133,7 +8570,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -8170,7 +8609,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2025",
       "cohortStartDate": "3/1/25",
@@ -8207,7 +8648,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2025",
       "cohortStartDate": "9/1/25",
@@ -8244,7 +8687,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -8281,7 +8726,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -8318,7 +8765,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -8355,7 +8804,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -8392,7 +8843,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -8429,7 +8882,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -8466,7 +8921,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -8503,7 +8960,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2025",
       "cohortStartDate": "9/1/25",
@@ -8540,7 +8999,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -8577,7 +9038,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -8614,7 +9077,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -8651,7 +9116,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -8688,7 +9155,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -8725,7 +9194,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2025",
       "cohortStartDate": "12/1/25",
@@ -8762,7 +9233,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -8799,7 +9272,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2025",
       "cohortStartDate": "3/1/25",
@@ -8836,7 +9311,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2025",
       "cohortStartDate": "9/1/25",
@@ -8873,7 +9350,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2025",
       "cohortStartDate": "9/1/25",
@@ -8910,7 +9389,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2026",
       "cohortStartDate": "6/1/26",
@@ -8947,7 +9428,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
@@ -8984,7 +9467,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2025",
       "cohortStartDate": "3/1/25",
@@ -9021,7 +9506,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -9058,7 +9545,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2025",
       "cohortStartDate": "9/1/25",
@@ -9095,7 +9584,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Summer2025",
       "cohortStartDate": "6/1/25",
@@ -9132,7 +9623,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -9169,7 +9662,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Fall2026",
       "cohortStartDate": "9/1/26",
@@ -9206,7 +9701,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Winter2026",
       "cohortStartDate": "12/1/26",
@@ -9243,7 +9740,9 @@
       "github": true,
       "mockInterview": true
     },
-    "notes": [],
+    "notes": [
+      
+    ],
     "cohort": {
       "cohortCode": "Spring2026",
       "cohortStartDate": "3/1/26",
