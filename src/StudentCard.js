@@ -1,4 +1,4 @@
-import React  from "react";
+import React from "react";
 import { useState } from "react";
 import GradTrack from "./GradTrack";
 function formatDate(birthDate) {
@@ -6,35 +6,36 @@ function formatDate(birthDate) {
   const options = { month: "long", day: "numeric", year: "numeric" };
   return date.toLocaleDateString("en-US", options);
 }
-function toggleShowMore(student) {
-  
-}
 
 function StudentCard({ student }) {
   const formattedDate = formatDate(student.dob);
   const [showMore, setShowMore] = useState(false);
   const toggleShowMore = () => {
     setShowMore(!showMore);
-    
   };
   return (
-    <div>
+    <div
+      className="card my-4 border-3 border-primary-subtle"
+      style={{ width: "20rem" }}
+    >
+      <img
+        className="img-fluid rounded-circle mx-auto my-2 "
+        style={{ width: "10rem" }}
+        src={student.profilePhoto}
+        alt="student headshots"
+      />
       <p>
         {student.names.preferredName} {student.names.middleName}{" "}
         {student.names.surname}
       </p>
-      <p>email: {student.username} </p>
+      <p>Username: {student.username} </p>
       <p>Birthday: {formattedDate}</p>
-      <p onClick={toggleShowMore}>
+      <button className="show-more-toggle" onClick={toggleShowMore}>
         {showMore ? "Show Less..." : "Show More..."}
-      </p>
-      
-      <img
-        className="profile-picture"
-        src={student.profilePhoto}
-        alt="student headshots"
-      />
-    </div>
+      </button>
+
+      {showMore && <GradTrack student={student} />}
+    </div> 
   );
 }
 // {
@@ -70,7 +71,7 @@ function StudentCard({ student }) {
 //       }
 //     ],
 //     "cohort": {
-//       "cohortCode": "Winter 2025",
+//       "cohortCode": "Winter2025",
 //       "cohortStartDate": "12/1/25",
 //       "scores": {
 //         "assignments": 0.71,

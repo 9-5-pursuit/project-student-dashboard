@@ -9,7 +9,7 @@ function StudentList() {
       <h2>All Students</h2>
       <h3>Total Students: {studentData.length}</h3>
       {studentData.map((student) => (
-        <StudentCard student={student} />
+        <StudentCard key={student.id} student={student} />
       ))}
     </div>
   );
