@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 export default function StudentCard({ student }) {
   const [showMore, setShowMore] = useState(false);
-  const [showNote, setShowNote] = useState(student.notes);
+  // const [showNote, setShowNote] = useState(student.notes);
 
   const studentNames = student.names;
   const studentCodewars = student.codewars;
@@ -61,10 +61,10 @@ export default function StudentCard({ student }) {
     event.preventDefault();
   }
 
-  function handleTextChange(event) {
-    const newNote = event.target.value;
-    setShowNote((prevNotes) => [...prevNotes, newNote]);
-  }
+  // function handleTextChange(event) {
+  //   const newNote = event.target.value;
+  //   setShowNote((prevNotes) => [...prevNotes, newNote]);
+  // }
 
   return (
     <div
@@ -177,7 +177,7 @@ export default function StudentCard({ student }) {
                     type="text"
                     id="name"
                     style={{ marginLeft: "10px" }}
-                    onChange={handleTextChange}
+                    // onChange={handleTextChange}
                   />
                 </div>
                 <div>
@@ -186,7 +186,7 @@ export default function StudentCard({ student }) {
                     type="text"
                     id="comment"                 
                     style={{ marginLeft: "10px", marginTop: "5px" }}
-                    onChange={handleTextChange}
+                    // onChange={handleTextChange}
                   />
                 </div>
                 <button
