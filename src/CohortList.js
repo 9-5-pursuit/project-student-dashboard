@@ -1,29 +1,46 @@
-import React, { useState } from "react";
+import React from "react";
 
 function CohortList({ studentData, setSelectedCohort }) {
   const cohorts = [
     "All Students",
-    "Winter 2026",
-    "Fall 2026",
-    "Summer 2026",
-    "Spring 2026",
-    "Winter 2025",
-    "Fall 2025",
-    "Summer 2025",
-    "Spring 2025",
+    "Winter2026",
+    "Fall2026",
+    "Summer2026",
+    "Spring2026",
+    "Winter2025",
+    "Fall2025",
+    "Summer2025",
+    "Spring2025",
   ];
 
   const handleCohortClick = (cohort) => {
-    setSelectedCohort(cohort);
+    setSelectedCohort(cohort === "All Students" ? null : cohort);
   };
-
+  const formatCohortName = (cohort) => {
+    if (cohort === "All Students") {
+      return cohort;
+    } else {
+      const index = cohort.indexOf("2");
+      if (index !== -1) {
+        const season = cohort.substring(0, index);
+        const year = cohort.substring(index);
+        return `${season} ${year}`;
+      } else {
+        return cohort;
+      }
+    }
+  };
   return (
-    <aside>
+    <aside className="row">
       <h2>Choose a Class by Start Date</h2>
-      <ul>
+      <ul className="col-4">
         {cohorts.map((cohort) => (
-          <li key={cohort} onClick={()=> handleCohortClick(cohort)}>
-            {cohort}
+          <li
+            className="btn cursor-pointer"
+            key={cohort}
+            onClick={() => handleCohortClick(cohort)}
+          >
+            {formatCohortName(cohort)}
           </li>
         ))}
       </ul>

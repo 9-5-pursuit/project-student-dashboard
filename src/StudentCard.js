@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import GradTrack from "./GradTrack";
+
 function formatDate(birthDate) {
   const date = new Date(birthDate);
   const options = { month: "long", day: "numeric", year: "numeric" };
@@ -13,10 +14,29 @@ function StudentCard({ student }) {
   const toggleShowMore = () => {
     setShowMore(!showMore);
   };
+  function onTrackToGraduate(student) {
+    if (
+      student.certifications.resume &&
+      student.certifications.linkedin &&
+      student.certifications.github &&
+      student.certifications.mockInterview &&
+      student.codewars.current.total > 600
+    ) {
+      return (
+        <span style={{ color: "green", fontWeight: "bold" }}>
+          On Track to Graduate
+        </span>
+      );
+    }
+    return null;
+  }
+
+  //   const result = onTrackToGraduate(student);
+
   return (
     <div
       className="card my-4 border-3 border-primary-subtle text-center "
-      style={{ width: "30rem" }}
+      style={{ width: "30rem", backgroundColor: "#AECAD5" }}
     >
       <img
         className="img-fluid rounded-circle mx-auto my-2 "
@@ -24,6 +44,7 @@ function StudentCard({ student }) {
         src={student.profilePhoto}
         alt="student headshots"
       />
+      {onTrackToGraduate(student)}
       <p>
         {student.names.preferredName} {student.names.middleName}{" "}
         {student.names.surname}
@@ -38,46 +59,5 @@ function StudentCard({ student }) {
     </div>
   );
 }
-// {
-//     "id": "D8-hEWB",
-//     "names": {
-//       "preferredName": "Israel",
-//       "middleName": "Benjamin",
-//       "surname": "Rodriguez"
-//     },
-//     "username": "israel.rodriguez@pursuit.org",
-//     "dob": "2/3/1979",
-//     "profilePhoto": "https://xsgames.co/randomusers/avatar.php?g=male&minimum_age=38&maximum_age=48",
-//     "codewars": {
-//       "current": {
-//         "total": 1804,
-//         "lastWeek": 144
-//       },
-//       "goal": {
-//         "total": 850,
-//         "lastWeek": 75
-//       }
-//     },
-//     "certifications": {
-//       "resume": false,
-//       "linkedin": false,
-//       "github": false,
-//       "mockInterview": false
-//     },
-//     "notes": [
-//       {
-//         "commenter": "Alan R.",
-//         "comment": "Israel is a pleasure to work with!"
-//       }
-//     ],
-//     "cohort": {
-//       "cohortCode": "Winter2025",
-//       "cohortStartDate": "12/1/25",
-//       "scores": {
-//         "assignments": 0.71,
-//         "projects": 0.7,
-//         "assessments": 0.66
-//       }
-//     }
-//   },
+
 export default StudentCard;
