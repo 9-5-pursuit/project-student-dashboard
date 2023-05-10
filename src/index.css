@@ -1,0 +1,8 @@
+.border {
+  border: 1cap green;
+}
+.hover:hover {
+  /* background-color: rgb(14, 100, 32); */
+  color: rgb(2, 51, 13);
+  cursor: pointer;
+}
