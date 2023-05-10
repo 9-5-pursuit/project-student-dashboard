@@ -1,0 +1,20 @@
+.footer {
+height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #010100;
+  text-align: center;
+}
+.footer-span {
+    color: #fff;
+  }
+  h5 {
+    color: #fff;
+    margin: 0.1rem;
+    font-weight: 400;
+    text-transform: none;
+    line-height: 1.25;
+  }
+  

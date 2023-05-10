@@ -1,0 +1,19 @@
+.navbar {
+    display: flex;
+    background: #FFC55C;
+    /* color: #fff; */
+    height: 11.4vh;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logout-btn, .logout-link {
+    font-size: 16px;
+    width: fit-content;
+    color: #010100;
+    background: transparent;
+    border: none;
+    text-decoration: none; 
+}
+

@@ -1,0 +1,33 @@
+.cohort-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+  }
+
+  .cohort-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 4px;
+  }
+
+  .cohort-card .start-date {
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: var(--title-color);
+  }
+  .cohort-card h4 {
+    color: var(--text-color);
+    font-size: 0.9em;
+  }
+
+  .cohort-card .fellows {
+    display: flex;
+    margin-top: 20px;
+  }
+  .cohort-card .fellows .avatar {
+    margin-right: 10px;
+  }
+  .cohort-card .btn {
+    text-decoration: none;
+  }
