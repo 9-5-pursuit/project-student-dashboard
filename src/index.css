@@ -1,0 +1,34 @@
+.header {
+  background-color: lightgreen;
+}
+
+h1.student-dash {
+  background-color: darkgreen;
+  color: white;
+}
+
+h1.student-dash {
+  text-align: center;
+}
+
+.studentlist {
+  /* border: solid 2px black; */
+}
+
+li.student {
+  border: solid 2px black;
+  list-style: none;
+}
+
+.toggle-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.main-info {
+}
+
+.main-info {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
