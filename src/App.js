@@ -7,7 +7,6 @@ import React, { useState } from "react";
 import studentsData from "./data/data.json";
 
 function App() {
-  // const [filter, setFilter] = useState("");
   const [cohortFilter, setCohortFilter] = useState("");
 
   const filteredStudents = studentsData.filter((student) => {
@@ -55,19 +54,6 @@ function App() {
           <h2>All Students</h2>
           <h3>Total Students: ({studentsData.length})</h3>
         </Col>
-      </Row>
-      <Row>
-        {/* <Col md={{ span: 6, offset: 6 }}>
-          <input
-            type="text"
-            placeholder="Filter by name:"
-            value={filter}
-            onChange={(e) => setFilter(e.target.value)}
-          />
-        </Col> */}
-      </Row>
-      <Row>
-        <Col md={{ span: 6, offset: 6 }}>{students}</Col>
       </Row>
     </Container>
   );
