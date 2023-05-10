@@ -72,7 +72,7 @@ function Cards({
                         className="btn  btn-link text-decoration-none"
                         data-bs-toggle="collapse"
                         href={"#" + id}
-                        role="button"
+                        // role="button"
                         aria-expanded="false"
                         aria-controls="collapseExample"
                       >
