@@ -1,0 +1,50 @@
+header {
+  background-color: #5c946e;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.list-group-item {
+  border: solid #5c946e 3px;
+}
+
+span {
+  color: #5c946e;
+}
+
+.bi-x-lg {
+  color: red;
+}
+
+.bi-check2 {
+  color: green;
+}
+
+.green {
+  color: green;
+}
+
+.yellow {
+  color: rgb(205, 205, 0);
+}
+
+.red {
+  color: red;
+}
+
+li {
+  list-style-type: none;
+}
+
+.cohort-title {
+  text-align: center;
+}
+
+.img-div {
+  padding: 10%;
+}
+
+.card-body {
+  margin-top: 50px;
+}
