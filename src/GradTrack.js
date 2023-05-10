@@ -3,23 +3,25 @@ import { FaTimes, FaCheck } from "react-icons/fa";
 import OneonOne from "./OneonOne";
 function GradTrack({ student }) {
   const {
-    id,
-    names: { preferredName, middleName, surname },
-    username,
-    dob,
-    profilePhoto,
+    // id,
+    // names: { preferredName, middleName, surname },
+    // username,
+    // dob,
+    // profilePhoto,
     codewars: {
       current: {
         total: codewarsCurrentTotal,
         lastWeek: codewarsCurrentLastWeek,
       },
-      goal: { total: codewarsGoalTotal, lastWeek: codewarsGoalLastWeek },
+      goal: { total: codewarsGoalTotal
+        // , lastWeek: codewarsGoalLastWeek 
+    },
     },
     certifications: { resume, linkedin, github, mockInterview },
     // notes: [{ commenter, comment }]
     cohort: {
-      cohortCode,
-      cohortStartDate,
+    //   cohortCode,
+    //   cohortStartDate,
       scores: { assignments, projects, assessments },
     },
   } = student;
