@@ -1,27 +1,17 @@
 import React from "react";
+import { filterStudents } from "../data/functions";
 
 function GradDd({
-  students,
-  setStudents,
+  cohortName,
   data,
   select,
   setSelect,
-  cohortName,
+  setSearch,
+  setSearchResult,
+  setStudents,
+  students,
 }) {
-  // filter students
-  function filterStudents(str, setFn1, setFn2, cohortArr) {
-    if (str === "AllStudents") {
-      setFn1(cohortArr);
-      setFn2(cohortArr);
-    } else {
-      const filteredStudentArr = cohortArr.filter(
-        ({ cohort }) => cohort.cohortCode === str.split(" ").join("")
-      );
-      setFn1(filteredStudentArr);
-      setFn2(filteredStudentArr);
-    }
-  }
-  // function for filter by graduation status
+  // fn for filter by graduation status
   function graduateStudents() {
     const graduateFilteredArr = students.filter(
       ({ codewars, certifications }) =>
@@ -33,14 +23,16 @@ function GradDd({
     );
     return graduateFilteredArr;
   }
-  // function for dropdown onChange
+  // fn for dropdown change
   function dropDownHandle(event) {
     const value = event.target.value;
     setSelect(value);
+    setSearch("");
     if (value === "graduate") {
       setStudents(graduateStudents());
+      setSearchResult(graduateStudents());
     } else if (value === "all") {
-      filterStudents(cohortName, setStudents, data);
+      filterStudents(cohortName, setStudents, setSearchResult, data);
     }
   }
 

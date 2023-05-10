@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { v1 as generateUniqueID } from "react-uuid";
+import uuid from "react-uuid";
 
 function Notes({ thisStudent }) {
   const notesArr = thisStudent[0].notes;
 
-  // state for notes
+  // state for notes/comments
   const [comment, setComment] = useState(notesArr);
 
   // state for new comment
@@ -17,8 +17,8 @@ function Notes({ thisStudent }) {
   const [button, setButton] = useState(false);
 
   // fn for handling user comments
-  function handleUserComment(event) {
-    setNewComment({ ...newComment, [event.target.name]: event.target.value });
+  function handleUserComment(e) {
+    setNewComment({ ...newComment, [e.target.name]: e.target.value });
   }
 
   function addComment() {
@@ -27,16 +27,15 @@ function Notes({ thisStudent }) {
       comment: newComment.comment,
     };
     notesArr.push(latestComment);
-    // setComment([latestComment, ...thisStudent[0].notes])
   }
-
+  // fn comment form reset
   function resetForm() {
     setNewComment({
       commenter: "",
       comment: "",
     });
   }
-
+  // fn submit
   function handleSubmit(event) {
     event.preventDefault();
     addComment();
@@ -44,7 +43,7 @@ function Notes({ thisStudent }) {
   }
 
   return (
-    <div className="notes">
+    <div className="Notes">
       <h4>1-on-1 Notes</h4>
       <div className="form">
         <form
@@ -52,14 +51,14 @@ function Notes({ thisStudent }) {
             handleSubmit(event);
           }}
         >
-          <label htmlFor="comment">Comment:</label>
+          <label htmlFor="commenter">Commenter:</label>
           <input
             type="text"
-            id="comment"
-            value={newComment.comment}
-            name="comment"
-            onChange={(event) => {
-              handleUserComment(event);
+            id="commenter"
+            value={newComment.commenter}
+            name="commenter"
+            onChange={(e) => {
+              handleUserComment(e);
             }}
           />
           <br />
@@ -69,8 +68,8 @@ function Notes({ thisStudent }) {
             id="comment"
             value={newComment.comment}
             name="comment"
-            onChange={(event) => {
-              handleUserComment(event);
+            onChange={(e) => {
+              handleUserComment(e);
             }}
           />
           <br />
@@ -80,8 +79,8 @@ function Notes({ thisStudent }) {
             type="submit"
             value=" Add Note"
             style={{
-              color: button ? "black" : "white",
-              backgroundColor: button ? "white" : "rgb(61, 128, 61)",
+              color: button ? "blue" : "white",
+              backgroundColor: button ? "white" : "blue",
             }}
             onMouseEnter={() => {
               setButton(true);
@@ -94,7 +93,7 @@ function Notes({ thisStudent }) {
       </div>
       <ul>
         {comment.map(({ comment, commenter }) => (
-          <li key={generateUniqueID()}>
+          <li key={uuid}>
             {commenter} says, "{comment}"
           </li>
         ))}

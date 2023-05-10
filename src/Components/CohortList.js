@@ -3,9 +3,17 @@ import CohortOrderButton from "./CohortOrderButton";
 import { filterStudents } from "../data/functions";
 import { sortCohort } from "../data/functions";
 
-function CohortList({ data, setStudents, setCohortName, setSelect }) {
+function CohortList({
+  data,
+  setStudents,
+  setCohortName,
+  setSearch,
+  setSearchResult,
+  setSelect,
+}) {
   // state for cohort list
   const [cohortList, setCohortList] = useState(sortCohort(data));
+
   // --- sort cohort fn
 
   function cohortFilter(event) {
@@ -14,18 +22,20 @@ function CohortList({ data, setStudents, setCohortName, setSelect }) {
 
     if (value === "AllStudents") {
       setStudents(data);
+      setSearchResult(data);
     } else {
-      filterStudents(value, setStudents, data);
+      filterStudents(value, setStudents, setSearchResult, data);
     }
-    // reset after cohort selected
+    // reset search & dd after cohort selected
     setSelect("all");
+    setSearch("");
   }
 
   return (
     <>
       <CohortOrderButton
         cohortList={cohortList}
-        setcohortList={setCohortList}
+        setCohortList={setCohortList}
       />
 
       {cohortList.map((el) => {
@@ -35,7 +45,7 @@ function CohortList({ data, setStudents, setCohortName, setSelect }) {
           <h4 className="cohort" key={el}>
             <span
               id={code}
-              onChange={(event) => {
+              onClick={(event) => {
                 cohortFilter(event);
               }}
             >

@@ -1,7 +1,11 @@
 /* - - - HELPER FNs - - - 
 - (a) - month names
 - (b) - filter students in cohort
-- (c) - sort cohort list
+- (c) - sort cohort list by season, year, and descending/ascending order
+- - - CODEWARS - - -
+- (d) - codewars goal percentage
+- (e) - percentage color change
+- (f) - middle name convert
 */
 
 // (a)
@@ -22,9 +26,9 @@ function filterStudents(str, setFn1, setFn2, cohortArr) {
     setFn1(cohortArr);
     setFn2(cohortArr);
   } else {
-    const filteredStudentArr = cohortArr.filter(
-      ({ cohort }) => cohort.cohortCode === str.split(" ").join("")
-    );
+    const filteredStudentArr = cohortArr.filter(({ cohort }) => {
+      return cohort.cohortCode === str.split(" ").join("");
+    });
     setFn1(filteredStudentArr);
     setFn2(filteredStudentArr);
   }
@@ -44,23 +48,17 @@ function sortCohort(cohortArr) {
     // console.log(cohortCode);
     const cCodeSplit = cohort.cohortCode.replace(`2`, ` 2`);
 
-    if (cohortCode.includes("2025") && !cohort2025.includes(cCodeSplit)) {
-      cohort2025.push(cCodeSplit);
-    } else if (
-      cohortCode.includes("2026") &&
-      !cohort2026.includes(cCodeSplit)
-    ) {
+    if (cohortCode.includes("2026") && !cohort2026.includes(cCodeSplit)) {
       cohort2026.push(cCodeSplit);
+    } else if (
+      cohortCode.includes("2025") &&
+      !cohort2025.includes(cCodeSplit)
+    ) {
+      cohort2025.push(cCodeSplit);
     }
   });
 
   // sort each arr by decending and ascending order by index of season
-
-  cohort2025.sort(
-    (a, b) =>
-      seasonOrder.indexOf(a.split(" ")[0]) -
-      seasonOrder.indexOf(b.split(" ")[0])
-  );
 
   cohort2026.sort(
     (a, b) =>
@@ -68,7 +66,41 @@ function sortCohort(cohortArr) {
       seasonOrder.indexOf(b.split(" ")[0])
   );
 
-  return allStudentsArr.concat(cohort2025, cohort2026);
+  cohort2025.sort(
+    (a, b) =>
+      seasonOrder.indexOf(a.split(" ")[0]) -
+      seasonOrder.indexOf(b.split(" ")[0])
+  );
+
+  return allStudentsArr.concat(cohort2026, cohort2025);
 }
 
-export { monthName, filterStudents, sortCohort };
+// (d)
+function goalPerc(num1, num2) {
+  return Math.round((num1 / num2) * 100);
+}
+
+// (e)
+function cwProgressColors(percentage) {
+  if (percentage < 50) {
+    return "red";
+  } else if (percentage > 50 && percentage < 100) {
+    return "goldenrod";
+  } else {
+    return "green";
+  }
+}
+
+function middleNameInitial(value) {
+  const arr = value.split(``);
+  return `${arr[0].toUpperCase()}.`;
+}
+
+export {
+  monthName,
+  filterStudents,
+  sortCohort,
+  goalPerc,
+  cwProgressColors,
+  middleNameInitial,
+};

@@ -1,4 +1,5 @@
 import React from "react";
+import { middleNameInitial } from "../data/functions";
 
 function SearchBar({
   setStudents,
@@ -9,12 +10,7 @@ function SearchBar({
 }) {
   const copyStudents = [...searchResult];
 
-  function middleNameInitial(value) {
-    const arr = value.split(``);
-    return `${arr[0].toUpperCase()}.`;
-  }
-
-  // function for filtering students by search
+  // fn for filter students by search
   function searchFilter(input) {
     const str = input.toLowerCase();
 
@@ -52,7 +48,7 @@ function SearchBar({
     <input
       id="searchbar"
       type="text"
-      placeholder="Search Students"
+      placeholder="Search Students..."
       value={search}
       onChange={(event) => {
         handleSearch(event);

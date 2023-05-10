@@ -1,10 +1,10 @@
 import React from "react";
 
-function Certifications({ certificatiions }) {
-  const resume = certificatiions.resume;
-  const linkedin = certificatiions.linkedin;
-  const github = certificatiions.github;
-  const mockInterview = certificatiions.mockInterview;
+function Certifications({ certifications }) {
+  const resume = certifications.resume;
+  const linkedin = certifications.linkedin;
+  const github = certifications.github;
+  const mockInterview = certifications.mockInterview;
   const x = <span aria-label="x">❌</span>;
   const check = <span aria-label="check">✅</span>;
 

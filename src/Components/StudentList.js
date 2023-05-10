@@ -2,6 +2,7 @@ import React from "react";
 import Birthday from "./Birthday";
 import StudentCohortLink from "./StudentCohortLink";
 import Graduate from "./Graduate";
+import { middleNameInitial } from "../data/functions";
 import ShowMoreButton from "./ShowMoreButton";
 
 function StudentList({
@@ -17,11 +18,6 @@ function StudentList({
     <>
       {students.map(
         ({ id, names, username, profilePhoto, dob, notes, cohort }) => {
-          function middleNameInitial(value) {
-            const arr = value.split(``);
-            return `${arr[0].toUpperCase()}.`;
-          }
-
           const firstName = names.preferredName;
           const middleI = middleNameInitial(names.middleName);
           const lastName = names.surname;
@@ -41,10 +37,9 @@ function StudentList({
                   </h4>
                   {username}
                   <br />
-
                   <Birthday dob={dob} />
                   <br />
-
+                  <br />
                   <StudentCohortLink
                     id={id}
                     setStudents={setStudents}
@@ -52,11 +47,14 @@ function StudentList({
                     data={data}
                     setCohortName={setCohortName}
                     setSelect={setSelect}
+                    setSearchResult={setSearchResult}
+                    setSearch={setSearch}
                   />
                 </div>
                 <Graduate thisId={id} students={students} />
               </div>
               <ShowMoreButton id={id} students={students} />
+              <br />
               <br />
             </div>
           );

@@ -1,20 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
+import { goalPerc } from "../data/functions";
+import { cwProgressColors } from "../data/functions";
 
 function CodeWars({ codewars }) {
-  function goalPerc(num1, num2) {
-    return Math.round((num1 / num2) * 100);
-  }
-
-  function cwProgressColors(percentage) {
-    if (percentage < 50) {
-      return "red";
-    } else if (percentage > 50 && percentage < 100) {
-      return "goldenrod";
-    } else {
-      return "green";
-    }
-  }
-
   const total = codewars.current.total;
   const lastWeek = codewars.current.lastWeek;
   const goal = codewars.goal.total;
