@@ -122,7 +122,7 @@ function AllStudents({ selectedStudents }) {
               <label htmlFor="comment">Comment</label>
               <input type="text" id="comment" />
               <br />
-              <button>Add Note</button>
+              <button className="btn_notes">Add Note</button>
             </form>
 
             <ul>
@@ -171,9 +171,12 @@ function AllStudents({ selectedStudents }) {
         {onTrackToGraduate(student.certifications, student.codewars) ===
           true && <p className="ontrack">On Track To Graduate</p>}
 
-        <a href="" onClick={() => toggleDetails(student.id)}>
+        <button
+          className="show_details"
+          onClick={() => toggleDetails(student.id)}
+        >
           {showDetails ? "Show Less..." : "Show More..."}
-        </a>
+        </button>
 
         {showDetails && getStudentDetails(student.id)}
       </div>
