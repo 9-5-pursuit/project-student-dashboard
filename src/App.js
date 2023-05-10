@@ -1,59 +1,99 @@
 import { useState } from "react";
 import data from "./data/data.json";
-// const days = [
-//   "Sunday",
-//   "Monday",
-//   "Tuesday",
-//   "Wednesday",
-//   "Thursday",
-//   "Friday",
-//   "Saturday",
-// ];
-// const months = [
-//   "January",
-//   "February",
-//   "March",
-//   "April",
-//   "May",
-//   "June",
-//   "July",
-//   "August",
-//   "September",
-//   "October",
-//   "November",
-//   "December",
-// ];
-// let now = new Date(data[0]["dob"]);
-// console.log(
-//   months[now.getMonth()] + " " + now.getDate() + " " + now.getFullYear()
-// );
-
-// new Date().toLocaleDateString("en-us", {
-//   year: "numeric",
-//   month: "short",
-//   day: "numeric",
-// });
-
-// console.log(new Date(data[0]["dob"]));
+import { v4 as uuidv4 } from "uuid";
 
 function App() {
-  let arr = [];
+  const [cardCohort, setCardCohort] = useState("All Students");
 
-  for (let i of data) {
-    arr.push(i["cohort"][["cohortCode"]]);
+  const [title, setTitle] = useState("All Students");
+
+  let cohortList = function () {
+    let newObj = [];
+
+    for (let i = 0; i < data.length; i++) {
+      newObj[i] = {
+        cohortName:
+          data[i]["cohort"]["cohortCode"].match(/[a-zA-Z]+/g) +
+          " " +
+          data[i]["cohort"]["cohortCode"].match(/\d+/g),
+        cohortCode: data[i]["cohort"]["cohortCode"],
+      };
+    }
+
+    const result = newObj.filter(
+      (item, index, self) =>
+        index ===
+        self.findIndex(
+          (e) =>
+            e.cohortName === item.cohortName && e.cohortCode === item.cohortCode
+        )
+    );
+    const sortedArr = result.sort((a, b) => {
+      if (a.cohortName.match(/\d+/g) < b.cohortName.match(/\d+/g)) {
+        return 1;
+      }
+      if (a.cohortName.match(/\d+/g) > b.cohortName.match(/\d+/g)) {
+        return -1;
+      }
+      return 0;
+    });
+
+    return sortedArr;
+  };
+
+  function showByCohort() {
+    let someArray = [];
+    for (let i of data) {
+      if (cardCohort === "All Students") {
+        return data;
+      }
+      if (i["cohort"]["cohortCode"] === cardCohort) {
+        // console.log(i);
+
+        someArray.push(i);
+      }
+    }
+
+    return someArray;
   }
 
-  let unique = [...new Set(arr)];
-  // console.log(unique);
+  /* Function to switch from show more to show less and vice versea */
 
-  for (let i of unique) {
-    i.match(/[a-zA-Z]+|[0-9]+/g);
+  function toggleShow(e) {
+    if (e.target.innerHTML === "Show More...") {
+      e.target.innerHTML = "Show Less...";
+    } else {
+      e.target.innerHTML = "Show More...";
+    }
   }
 
-  // console.log(unique.sort());
-  // const sorted = unique.sort();
-  // console.log(sorted);
+  /**********************************/
+  function handleTitle(e) {
+    setTitle(e.target.innerHTML);
+    setCardCohort(e.target.id);
+  }
 
+  function handleBirthday(date) {
+    let options = {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    };
+    let birthday = new Date(date);
+    let formattedBirthday = birthday.toLocaleDateString("en-US", options);
+    return formattedBirthday;
+  }
+
+  function handleGoalColor(a, b) {
+    let goal = ((a / b) * 100).toFixed();
+    if (goal >= 100) {
+      return "green";
+    } else if (goal >= 50 && goal < 100) {
+      return "yellow";
+    } else {
+      return "red";
+    }
+  }
   return (
     <div className="App">
       <header>
@@ -66,12 +106,27 @@ function App() {
         <h3>Choose a Class by Start Date</h3>
 
         <ul className="list-group list-group-flush">
-          <li className="list-group-item fw-bold">All Students</li>
+          <li className="list-group-item fw-bold">
+            <a
+              className="text-decoration-none text-dark"
+              href="#"
+              onClick={() => setCardCohort("All Students")}
+            >
+              All Students
+            </a>
+          </li>
 
-          {unique.map((item) => {
+          {cohortList().map(({ cohortCode, cohortName }) => {
             return (
               <li key={Math.random()} className="list-group-item fw-bold">
-                {item}
+                <a
+                  className="text-decoration-none text-dark"
+                  onClick={handleTitle}
+                  href="#"
+                  id={cohortCode}
+                >
+                  {cohortName}
+                </a>
               </li>
             );
           })}
@@ -84,14 +139,14 @@ function App() {
 
       <main className="my-4">
         <div className="main-header">
-          <h2>All Students</h2>
+          <h2>{title}</h2>
           <p>
-            Total Students: <span>{data.length}</span>
+            Total Students: <span>{showByCohort().length}</span>
           </p>
         </div>
 
         <div className="card-container">
-          {data.map(
+          {showByCohort().map(
             ({
               names,
               username,
@@ -101,6 +156,7 @@ function App() {
               codewars,
               cohort,
               certifications,
+              notes,
             }) => {
               return (
                 <div
@@ -129,20 +185,31 @@ function App() {
                         <p className="card-email">{username}</p>
                         <p className="card-birthday">
                           <span>Birthday: </span>
-                          {dob}
+                          {handleBirthday(dob)}
                         </p>
-
+                        {certifications["resume"] &&
+                        certifications["linkedin"] &&
+                        certifications["github"] &&
+                        certifications["mockInterview"] &&
+                        codewars["current"]["total"] >= 600 &&
+                        cardCohort !== "All Students" ? (
+                          <p>
+                            <span>On Track To Graduate</span>
+                          </p>
+                        ) : null}
                         <p>
-                          <a
-                            className="btn btn-link"
+                          <button
+                            className="btn btn-link text-decoration-none"
                             data-bs-toggle="collapse"
                             href={"#" + id}
                             role="button"
                             aria-expanded="false"
                             aria-controls="collapseExample"
                           >
-                            <span>Show More...</span>
-                          </a>
+                            <span onClickCapture={toggleShow}>
+                              Show More...
+                            </span>
+                          </button>
                         </p>
                         <div className="collapse" id={id}>
                           <div className="card-body">
@@ -157,61 +224,137 @@ function App() {
                               <tbody>
                                 <tr>
                                   <td>
-                                    Current Total:{" "}
+                                    <span>Current Total:</span>{" "}
                                     {codewars["current"]["total"]}
                                   </td>
                                   <td>
-                                    Assignments:{" "}
+                                    <span>Assignments:</span>{" "}
                                     {cohort["scores"]["assignments"] * 100} %
                                   </td>
                                   <td>
-                                    Resume:{" "}
-                                    {!certifications["resume"] ? "x" : "/"}
+                                    <span>Resume:</span>{" "}
+                                    {!certifications["resume"] ? (
+                                      <i className="bi bi-x-lg"></i>
+                                    ) : (
+                                      <i className="bi bi-check2"></i>
+                                    )}
                                   </td>
                                 </tr>
                                 <tr>
                                   <td>
-                                    Last Week: {codewars["current"]["lastWeek"]}
+                                    <span>Last Week:</span>{" "}
+                                    {codewars["current"]["lastWeek"]}
                                   </td>
                                   <td>
-                                    Projects:{" "}
+                                    <span>Projects:</span>{" "}
                                     {cohort["scores"]["projects"] * 100} %
                                   </td>
                                   <td>
-                                    LinkedIn:{" "}
-                                    {!certifications["linkedin"] ? "x" : "/"}
+                                    <span>LinkedIn:</span>{" "}
+                                    {!certifications["linkedin"] ? (
+                                      <i className="bi bi-x-lg"></i>
+                                    ) : (
+                                      <i className="bi bi-check2"></i>
+                                    )}
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td>Goal: {codewars["goal"]["total"]}</td>
                                   <td>
-                                    Assessments:{" "}
+                                    <span>Goal:</span>{" "}
+                                    {codewars["goal"]["total"]}
+                                  </td>
+                                  <td>
+                                    <span>Assessments:</span>{" "}
                                     {cohort["scores"]["assessments"] * 100} %
                                   </td>
                                   <td>
-                                    Mock Interview:{" "}
-                                    {!certifications["mockInterview"]
-                                      ? "x"
-                                      : "/"}
+                                    <span>Mock Interview:</span>{" "}
+                                    {!certifications["mockInterview"] ? (
+                                      <i className="bi bi-x-lg"></i>
+                                    ) : (
+                                      <i className="bi bi-check2"></i>
+                                    )}
                                   </td>
                                 </tr>
                                 <tr>
                                   <td colSpan="2">
-                                    Percent of Goal Achieved:{" "}
-                                    {(
-                                      (codewars["current"]["total"] /
-                                        codewars["goal"]["total"]) *
-                                      100
-                                    ).toFixed()}{" "}
-                                    %
+                                    <span>Percent of Goal Achieved:</span>{" "}
+                                    <span
+                                      className={handleGoalColor(
+                                        codewars["current"]["total"],
+                                        codewars["goal"]["total"]
+                                      )}
+                                    >
+                                      {(
+                                        (codewars["current"]["total"] /
+                                          codewars["goal"]["total"]) *
+                                        100
+                                      ).toFixed()}{" "}
+                                      %
+                                    </span>
                                   </td>
                                   <td>
-                                    Github:{" "}
-                                    {!certifications["github"] ? "x" : "/"}
+                                    <span>Github:</span>{" "}
+                                    {!certifications["github"] ? (
+                                      <i className="bi bi-x-lg"></i>
+                                    ) : (
+                                      <i className="bi bi-check2"></i>
+                                    )}
                                   </td>
                                 </tr>
                               </tbody>
                             </table>
+                            <div className="notes">
+                              <h6>1-on-1 Notes</h6>
+                              <form>
+                                <div className="mb-2">
+                                  <label
+                                    className=" col-form-label "
+                                    htmlFor="commenter"
+                                  >
+                                    Commenter Name:
+                                  </label>
+                                  <div>
+                                    <input
+                                      className=""
+                                      type="text"
+                                      id={id}
+                                      name="commenter"
+                                    />
+                                  </div>
+                                </div>
+                                <label htmlFor="comment">Comment:</label>
+                                <div>
+                                  <input
+                                    className=""
+                                    type="text"
+                                    id={id}
+                                    name="comment"
+                                  />
+                                </div>
+                                <div>
+                                  <button
+                                    className="
+                                  mt-3"
+                                    type="submit"
+                                  >
+                                    Add Note
+                                  </button>
+                                </div>
+                              </form>
+
+                              <ul>
+                                {notes.map((item) => {
+                                  return (
+                                    <li key={Math.random()}>
+                                      {item.commenter +
+                                        " says " +
+                                        `"${item.comment}"`}
+                                    </li>
+                                  );
+                                })}
+                              </ul>
+                            </div>
                           </div>
                         </div>
                       </div>
