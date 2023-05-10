@@ -41,7 +41,7 @@ function App() {
     <Container>
       <Row>
         <Col md={{ span: 6, offset: 6 }}>
-          <h1>Student Dashboard</h1>
+          <h1 className="Header">Student Dashboard</h1>
         </Col>
       </Row>
       <CohortList
