@@ -33,7 +33,6 @@ function StudentList({ originalData, cohortStudentList, cohortYear }) {
     ];
 
     let splitDatesArr = dob.split("/");
-    // console.log(splitDatesArr);
 
     let year = splitDatesArr[2];
     let day = splitDatesArr[1];
@@ -77,7 +76,7 @@ function StudentList({ originalData, cohortStudentList, cohortYear }) {
     <>
       {cohortStudentList ? <h2>{cohortYear}</h2> : <h2>All Students</h2>}
       <h3>Total Students: {count()}</h3>
-      <div>
+      <div className="card-columns">
         {(cohortStudentList || originalData).map(
           ({
             id,
@@ -90,31 +89,44 @@ function StudentList({ originalData, cohortStudentList, cohortYear }) {
             cohort,
             notes,
           }) => (
-            <div key={id}>
-              <img
-                src={profilePhoto}
-                alt="student"
-                height="100px"
-                id="profile-photo"
-              />
-              <p>
-                {names.preferredName} {names.middleName.charAt(0)}.
-                {names.surname}
-              </p>
-              <p>{username}</p>
-              <p>{birthdayConversion(dob)}</p>
-              <p>{onTrackToGraduate(certifications, codewars)}</p>
-              <button onClick={() => handleShowDetails(id)}>
-                {studentDetails[id] ? <p>Show Less...</p> : <p>Show More...</p>}
-              </button>
-              {studentDetails[id] && (
-                <Details
-                  codewars={codewars}
-                  certifications={certifications}
-                  cohort={cohort}
-                  notes={notes}
-                />
-              )}
+            <div key={id} className="card">
+              <div className="row g-0">
+                <div className="col-md-4">
+                  <img
+                    src={profilePhoto}
+                    alt="student"
+                    className="img-fluid rounded-circle"
+                  />
+                </div>
+                <div className="col-md-8">
+                  <div className="card-body">
+                    <h5 className="card-title">
+                      {names.preferredName} {names.middleName.charAt(0)}.{" "}
+                      {names.surname}
+                    </h5>
+                    <p className="card-text">{username}</p>
+                    <p className="card-text">{birthdayConversion(dob)}</p>
+                    <p className="card-text text-success">
+                      {onTrackToGraduate(certifications, codewars)}
+                    </p>
+                    <button
+                      type="button"
+                      className="btn btn-primary btn-sm"
+                      onClick={() => handleShowDetails(id)}
+                    >
+                      {studentDetails[id] ? "Show Less..." : "Show More..."}
+                    </button>
+                    {studentDetails[id] && (
+                      <Details
+                        codewars={codewars}
+                        certifications={certifications}
+                        cohort={cohort}
+                        notes={notes}
+                      />
+                    )}
+                  </div>
+                </div>
+              </div>
             </div>
           )
         )}

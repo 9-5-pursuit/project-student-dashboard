@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaTimes, FaCheck } from "react-icons/fa";
 import OneonOne from "./OneonOne";
 
@@ -26,50 +26,56 @@ function Details({ codewars, certifications, cohort, notes }) {
   }
 
   return (
-    <div>
-      <section>
-        <h3>Codewars:</h3>
-        <ol>
-          <li>Current Total: {codewars.current.total}</li>
-          <li>Last Week: {codewars.current.lastWeek}</li>
-          <li>Goal: {codewars.goal.total}</li>
-          <li style={{ color: stylePercent }}>
-            Percent of Goal Achieved:
-            {` ${Math.floor(
-              (codewars.current.total / codewars.goal.total) * 100
-            )} %`}
-          </li>
-        </ol>
-      </section>
-      <section>
-        <h3>Scores:</h3>
-        <ol>
-          <li className="cohort-scores" id="active">
-            Assignments: {`${cohort.scores.assignments * 100} %`}
-          </li>
-          <li id="active">Projects: {`${cohort.scores.projects * 100} %`}</li>
-          <li id="active">
-            Assessments: {`${cohort.scores.assessments * 100} %`}
-          </li>
-        </ol>
-      </section>
-      <section>
-        <h3>Certifications:</h3>
-        <ol>
-          <li>
-            Resume: {certified(certifications) ? <FaCheck /> : <FaTimes />}
-          </li>
-          <li>
-            LinkedIn: {certifications.linkedin ? <FaCheck /> : <FaTimes />}
-          </li>
-          <li>
-            Mock Interview:{" "}
-            {certifications.mockInterview ? <FaCheck /> : <FaTimes />}
-          </li>
-          <li>Github: {certifications.github ? <FaCheck /> : <FaTimes />}</li>
-        </ol>
-      </section>
-      <OneonOne notes={notes} />
+    <div className="container ">
+      <div className="row">
+        <div className="col-md-4">
+          <section className="section">
+            <h3>Codewars:</h3>
+            <ul>
+              <li>Current Total: {codewars.current.total}</li>
+              <li>Last Week: {codewars.current.lastWeek}</li>
+              <li>Goal: {codewars.goal.total}</li>
+              <li style={{ color: stylePercent }}>
+                Percent of Goal Achieved:
+                {` ${Math.floor(
+                  (codewars.current.total / codewars.goal.total) * 100
+                )} %`}
+              </li>
+            </ul>
+          </section>
+        </div>
+        <div className="col-md-4">
+          <section className="section">
+            <h3>Scores:</h3>
+            <ul>
+              <li>Assignments: {`${cohort.scores.assignments * 100} %`}</li>
+              <li>Projects: {`${cohort.scores.projects * 100} %`}</li>
+              <li>Assessments: {`${cohort.scores.assessments * 100} %`}</li>
+            </ul>
+          </section>
+        </div>
+        <div className="col-md-4">
+          <section className="section">
+            <h3>Certifications:</h3>
+            <ul>
+              <li>
+                Resume: {certified(certifications) ? <FaCheck /> : <FaTimes />}
+              </li>
+              <li>
+                LinkedIn: {certifications.linkedin ? <FaCheck /> : <FaTimes />}
+              </li>
+              <li>
+                Mock Interview:{" "}
+                {certifications.mockInterview ? <FaCheck /> : <FaTimes />}
+              </li>
+              <li>
+                Github: {certifications.github ? <FaCheck /> : <FaTimes />}
+              </li>
+            </ul>
+          </section>
+        </div>
+        <OneonOne notes={notes} />
+      </div>
     </div>
   );
 }

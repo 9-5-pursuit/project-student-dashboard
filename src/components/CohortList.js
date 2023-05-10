@@ -1,32 +1,6 @@
-import React, { useState } from "react";
-import StudentList from "./StudentList";
+import React from "react";
 
-function CohortList({ data }) {
-  const [cohortStudentList, setCohortStudentList] = useState();
-  const [originalData, setOriginalData] = useState(data);
-  const [cohortYear, setCohortYear] = useState();
-
-  function updateStudentList(info) {
-    if (info.length === originalData.length) {
-      setOriginalData(data);
-      setCohortStudentList(null);
-      setCohortYear(null);
-      return data;
-    }
-
-    let year = info.replace(" ", "");
-    let cohortData = data.filter(({ cohort }) => year === cohort.cohortCode);
-
-    if (cohortData.length > 0) {
-      //   console.log(cohortData);
-      setCohortYear(info);
-
-      setCohortStudentList(cohortData);
-      return cohortData;
-    }
-  }
-
-  //   this function is to get the different years of the cohorts
+function CohortList({ data, updateStudentList }) {
   function cohortCode(data) {
     let cohortYears = [];
     const Winter2026 = data.filter(
@@ -55,34 +29,27 @@ function CohortList({ data }) {
     );
 
     if (Winter2026.length > 0) {
-      //   console.log("im in Winter 2026");
       cohortYears.push("Winter 2026");
     }
     if (Fall2026.length > 0) {
       cohortYears.push("Fall 2026");
     }
     if (Summer2026.length > 0) {
-      //   console.log("im in Summer 2026");
       cohortYears.push("Summer 2026");
     }
     if (Spring2026.length > 0) {
-      //   console.log("im in Spring 2026");
       cohortYears.push("Spring 2026");
     }
     if (Winter2025.length > 0) {
-      //   console.log("im in Winter 2025");
       cohortYears.push("Winter 2025");
     }
     if (Fall2025.length > 0) {
-      //   console.log("im in Fall2025");
       cohortYears.push("Fall 2025");
     }
     if (Summer2025.length > 0) {
-      //   console.log("im in Summer 2025");
       cohortYears.push("Summer 2025");
     }
     if (Spring2025.length > 0) {
-      //   console.log("im in Spring 2025");
       cohortYears.push("Spring 2025");
     }
 
@@ -91,23 +58,26 @@ function CohortList({ data }) {
 
   return (
     <>
-      <h3>Choose a Class by Start Date</h3>
-
-      <div>
-        <p onClick={() => updateStudentList(data)}>All Students</p>
-
+      <h3 className="mt-4">Choose a Class by Start Date</h3>
+      <div className="list-group">
+        <button
+          type="button"
+          className="list-group-item list-group-item-action"
+          onClick={() => updateStudentList(data)}
+        >
+          All Students
+        </button>
         {cohortCode(data).map((cohortYears) => (
-          <div key={cohortYears}>
-            <p onClick={() => updateStudentList(cohortYears)}>{cohortYears}</p>
-          </div>
+          <button
+            key={cohortYears}
+            type="button"
+            className="list-group-item list-group-item-action"
+            onClick={() => updateStudentList(cohortYears)}
+          >
+            {cohortYears}
+          </button>
         ))}
       </div>
-
-      <StudentList
-        originalData={originalData}
-        cohortStudentList={cohortStudentList}
-        cohortYear={cohortYear}
-      />
     </>
   );
 }
