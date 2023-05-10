@@ -15,8 +15,8 @@ function StudentCard({ student }) {
   };
   return (
     <div
-      className="card my-4 border-3 border-primary-subtle"
-      style={{ width: "20rem" }}
+      className="card my-4 border-3 border-primary-subtle text-center "
+      style={{ width: "30rem" }}
     >
       <img
         className="img-fluid rounded-circle mx-auto my-2 "
@@ -30,12 +30,12 @@ function StudentCard({ student }) {
       </p>
       <p>Username: {student.username} </p>
       <p>Birthday: {formattedDate}</p>
-      <button className="show-more-toggle" onClick={toggleShowMore}>
+      <button className="btn btn-primary btn-sm" onClick={toggleShowMore}>
         {showMore ? "Show Less..." : "Show More..."}
       </button>
 
       {showMore && <GradTrack student={student} />}
-    </div> 
+    </div>
   );
 }
 // {

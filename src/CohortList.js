@@ -1,23 +1,33 @@
-import React from "react";
-//onClick change title on student list to match cohort clicked 
-function CohortList(student) {
-    // const 
+import React, { useState } from "react";
+
+function CohortList({ studentData, setSelectedCohort }) {
+  const cohorts = [
+    "All Students",
+    "Winter 2026",
+    "Fall 2026",
+    "Summer 2026",
+    "Spring 2026",
+    "Winter 2025",
+    "Fall 2025",
+    "Summer 2025",
+    "Spring 2025",
+  ];
+
+  const handleCohortClick = (cohort) => {
+    setSelectedCohort(cohort);
+  };
+
   return (
     <aside>
       <h2>Choose a Class by Start Date</h2>
       <ul>
-        <li>All Students</li>
-        <li>Winter 2026</li>
-        <li>Fall 2026</li>
-        <li>Summer 2026</li>
-        <li>Spring 2026</li>
-        <li>Winter 2025</li>
-        <li>Fall 2025</li>
-        <li>Summer 2025</li>
-        <li>Spring 2025</li>
+        {cohorts.map((cohort) => (
+          <li key={cohort} onClick={()=> handleCohortClick(cohort)}>
+            {cohort}
+          </li>
+        ))}
       </ul>
     </aside>
   );
 }
-
 export default CohortList;
