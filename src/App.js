@@ -1,9 +1,4 @@
 import { useState } from "react";
-import { ListGroupItem } from "react-bootstrap";
-
-// // imported to style cards
-import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
 import Table from 'react-bootstrap/Table';
 import studentData from './data/data.json'
 
