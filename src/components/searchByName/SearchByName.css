@@ -1,0 +1,25 @@
+.search-by-name {
+  justify-self: left;
+  align-self: center;
+  width: 90%;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 40% 70%;
+  place-items: self-start;
+}
+
+.search-by-name input {
+  background-color: #f4f6f8;
+  border-radius: 5px;
+}
+.search-by-name input:hover {
+  border: 1px solid #4889b8 4889B8;
+}
+.search-by-name input:focus-visible {
+  border: 2px solid #4889b8;
+}
+
+.MuiBox-root {
+  background-color: #f4f6f8;
+  border-radius: 5px;
+}

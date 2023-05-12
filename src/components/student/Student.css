@@ -1,0 +1,38 @@
+.student {
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  /* border: 2px solid #8c848d; */
+  border: 2px solid #4889b8;
+  transition: all ease-in 0.15s;
+  border-radius: 20px;
+  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+  box-shadow: inset 5px 8.66px 13.66px -1.71px rgba(0, 0, 0, 0.15),
+    inset -7.5px -12.99px 13.66px -1.71px rgba(0, 0, 0, 0.3),
+    15px 25.98px 10.25px -5.12px rgba(0, 0, 0, 0.6);
+  margin-bottom: 35px;
+}
+
+.student img {
+  border-radius: 20px;
+  box-shadow: 2px 2px 1px #444;
+}
+
+.student:hover {
+  border: 4px solid #786579;
+  background-color: #cfa351;
+}
+.divider {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.card .show-more {
+  color: #f4f6f8;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.details {
+  grid-column: 1/3;
+  padding: 20px;
+}

@@ -1,0 +1,17 @@
+.show-on-track-students {
+  justify-self: center;
+  align-self: center;
+}
+
+.show-on-track-students button {
+  height: 45px;
+  padding: 0 20px;
+  box-shadow: 1px 2px 2px black;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.show-on-track-students .active {
+  background-color: #786579;
+  color: #f4f6f8;
+}

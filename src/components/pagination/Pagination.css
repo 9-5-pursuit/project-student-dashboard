@@ -1,0 +1,19 @@
+.pagination {
+  justify-self: end;
+  align-self: center;
+}
+
+.pagination button {
+  cursor: pointer;
+  padding: 5px;
+  margin: 2px;
+  border-radius: 3px;
+}
+
+.current-page {
+  background: #561c1e;
+}
+
+.pagination button:hover {
+  background-color: #786579;
+}
