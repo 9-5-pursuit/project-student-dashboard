@@ -1,6 +1,7 @@
 import React from "react";
+import "./header.css";
 
-const Header=({ studentsList, setStudentsList }) =>{
+const Header = ({ studentsList, setStudentsList }) => {
   const handleStudentsList = () => {
     setStudentsList(studentsList.length);
   };
@@ -11,5 +12,5 @@ const Header=({ studentsList, setStudentsList }) =>{
       </header>
     </div>
   );
-}
+};
 export default Header;

@@ -1,5 +1,6 @@
 import React from "react";
 import StudentCard from "./StudentCard";
+import "./filteredStudents.css";
 
 const FilteredStudents = ({
   selectedCohort,

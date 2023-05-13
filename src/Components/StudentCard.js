@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Kpi from "./Kpi";
+import "./kpi.css";
 
 const StudentCard = ({ student }) => {
   const [buttonText, setButtonText] = useState(false);

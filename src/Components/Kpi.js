@@ -1,7 +1,8 @@
 import React from "react";
 import Form from "./Form";
+import "./kpi.css";
 
-const Kpi = ({ student }) => {
+const Kpi = ({student }) => {
   console.log(student.certifications.resume);
   return (
     <div className="kpi">
