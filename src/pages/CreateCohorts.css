@@ -1,16 +1,15 @@
 .cohort {
-    display: flex;
-  /* align-items: center; */
+  display: flex;
   justify-content: center;
   height: 100vh;
- 
-  background: #282C35;
+  margin-top: 50px;
 }
 
 form {
-    width: 50%;
+    width: 70%;
+    height: 50%;
     background-color: hsl(0, 0%, 100%);
-    padding: 0 60px;
+    padding: 0 40px;
     border-radius: 10px;
     margin-top: 20px;
     margin-bottom: 20px;  
@@ -42,7 +41,7 @@ form {
     font-size: 1em;
     font-weight: bold;
     cursor: pointer;
-    margin-top: 230px;
+    margin-top: 60px;
     margin-bottom: 30px;
    
   

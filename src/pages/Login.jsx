@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { useLogin } from "../hooks/useLogin";
 
 import "./Login.css";
@@ -8,14 +7,12 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { login, error, isPending } = useLogin();
-  const navigate = useNavigate();
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email, password);
+    // console.log(email, password);
     login(email, password);
-
-    navigate("/dashboard");
   };
 
   return (
@@ -33,7 +30,6 @@ export default function Login() {
             value={email}
             autoComplete="on"
           />
-
           <label>
             <span>password:</span>
           </label>
@@ -45,11 +41,10 @@ export default function Login() {
             autoComplete="on"
           />
         </div>
-
-        {!isPending && <button className="btn-form">Login</button>}
+        {!isPending && <button className="btn">Login</button>}
         {isPending && (
-          <button className="btn-form" disabled>
-            loading
+          <button className="btn" disabled>
+            Loading...
           </button>
         )}
         {error && <div className="error">{error}</div>}

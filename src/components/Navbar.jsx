@@ -1,28 +1,31 @@
 import React from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useLogout } from "../hooks/useLogout";
+import { useAuthContext } from "../hooks/useAuthContext"
+
 
 import "./Navbar.css";
 
 const Navbar = () => {
   const { logout, isPending } = useLogout();
-  const navigate = useNavigate();
+  const { user } = useAuthContext()
 
-  const userLogout = async () => {
-    await logout();
-    navigate("/login");
-  };
   return (
     <div className="navbar">
-      <Link className="logout-link" to="/">
-        Home
-      </Link>
-      {!isPending && (
-        <button onClick={userLogout} className="logout-btn">
-          Logout
-        </button>
-      )}
-      {isPending && <button disabled>Logging out...</button>}
+      <ul>
+        {!user && (
+          <>
+            <li><Link to="/login">Login</Link></li>
+            <li><Link to="/signup">Signup</Link></li>
+          </>
+        )}
+        {user && (
+          <li>
+            {!isPending && <button className="btn-logout" onClick={logout}>Logout</button>}
+            {isPending && <button className="btn-logout" disabled>Logging out...</button>}
+          </li>
+        )}
+      </ul>
     </div>
   );
 };

@@ -1,13 +1,14 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useDocument } from "../hooks/useDocument";
 import Avatar from "../components/Avatar";
 
 import "./Cohort.css";
 
 const Cohort = () => {
-  const { id } = useParams();
+  
   const { error, document } = useDocument("cohorts");
+  console.log(document);
 
   if (error) {
     return <div className="error">{error}</div>;
@@ -23,13 +24,14 @@ const Cohort = () => {
           Cohort Starts on: {document.startDate.toDate().toDateString()}
         </p>
         <h4>Fellows</h4>
-        {document.assignedUsersList.map((user) => (
-          <div key={document.startDate} className="fellows">
-            <Avatar src={user.photoURL} />
-            <h5>{user.displayName}</h5>
-          </div>
-        ))}
-        <Link to="/dashboard" className="btn">
+        {document.assignedUsersList &&
+          document.assignedUsersList.map((user) => (
+            <div key={document.id} className="fellows">
+              <Avatar src={user.photoURL} />
+              <h5>{user.displayName}</h5>
+            </div>
+          ))}
+        <Link to="/" className="btn">
           Dashboard
         </Link>
       </div>

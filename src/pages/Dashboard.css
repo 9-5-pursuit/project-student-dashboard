@@ -1,28 +1,4 @@
- .dashboard {
-   display: flex; 
-  } 
-  .dashboard .dash-container {
-    flex-grow: 1;
-    /* padding: 0 60px; */
-  }
-  .sidebar-container {
-    width: 250px;
-    min-width: 250px;
-    background: #FFC55C;
-    min-height: 100vh;
-    box-sizing: border-box;
-    position: relative;
-  }
-  
-  .sidebar-content {
-    position: fixed;
-    width: inherit;
-  }
-  
-  .sidebar {
-    margin-bottom: 20px;
-  }
-  .cohort-comment {
+ .cohort-comment {
     margin-top: 60px;
     margin-left: 60px;
     padding: 60px;

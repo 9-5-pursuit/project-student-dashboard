@@ -1,23 +1,41 @@
 .sidebar {
-    width: 250px;
-    min-width: 250px;
+    width: 200px;
+    min-width: 200px;
     background: #FFC55C;
     min-height: 100vh;
     box-sizing: border-box;
-    position: relative;
-    margin-bottom: 0;
-    
+    position: relative;  
   }
   .sidebar-content {
     position: fixed;
     width: inherit;
   }
+  .sidebar-content .logo {
+    font-weight: bold;
+    color: var(--heading-color);
+    /* letter-spacing: 1px; */
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+  }
+  .sidebar-content .logo img {
+    margin: 10px;
+    filter: invert(10%);
+    width: 30px;
+  }
   .sidebar .user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-weight: bold;
     text-align: center;
     letter-spacing: 1px;
-    padding: 40px 30px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.814);
+    padding: 20px 10px;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.814); */
+  }
+  .sidebar .user .email {
+    font-size: 11px;
+    font-weight: lighter;
   }
   .sidebar .links {
     margin-top: 80px;
@@ -25,15 +43,15 @@
   }
   .sidebar .links li {
     margin-top: 10px;
+    width: 100%;
   }
   .sidebar .links a {
     display: flex;
     padding: 10px;
     text-decoration: none;
-    width: 100%;
     box-sizing: border-box;
   }
-  .projects, .dash {
+  .cohorts {
     color: var(--heading-color);
     font-size: 16px;
     display: contents;
@@ -42,12 +60,14 @@
     margin-right: 10px;
     filter: invert(100%);
   }
-
+  .sidebar .links a.active {
+    color: #555;
+    background: var(--bg-color);
+    border-radius: 20px 0 0 20px;
+  }
   .sidebar .links .active img {
     filter: invert(40%);
   }
-  
-  
   .sidebar .user .avatar {
     margin-bottom: 10px;
     width: 70px;

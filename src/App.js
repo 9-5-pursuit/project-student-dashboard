@@ -1,33 +1,50 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import { BrowserRouter as Router, Routes, Route,Navigate } from "react-router-dom";
+import { useAuthContext } from "./hooks/useAuthContext";
+import OnlineUsers from "./components/OnlineUsers";
 import {
-  Home,
   Dashboard,
-  Create,
   Login,
   SignUp,
-  Cohorts,
+  CreateCohorts,
   GetCohorts,
   Cohort,
 } from "./pages";
+import { Navbar, Sidebar } from "./components";
+import "./App.css";
 
 function App() {
+  const { authIsReady, user } = useAuthContext();
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-
-        <Route path="/dashboard" element=<Dashboard /> />
-        <Route path="/add-cohorts" element=<Cohorts /> />
-        <Route path="/cohorts" element=<GetCohorts /> />
-        <Route path="/cohorts/:id" element=<Cohort /> />
-        <Route path="/create" element={<Create />} />
-
-        <Route path="/signup" element={<SignUp />} />
-      </Routes>
-    </Router>
+    <div className="app">
+    {authIsReady && (
+      <Router>
+        <Sidebar />
+        <div className="container">
+          <Navbar />
+          <Routes>
+            <Route 
+            path="/login" 
+            element={user ? <Navigate to="/" /> : <Login />} 
+            />
+            <Route 
+            path="/signup" 
+            element={user ? <Navigate to="/" /> : <SignUp />} 
+            />
+            <Route path="/" element={<Dashboard />} />
+            <Route 
+            path="/add-cohorts" 
+            element={user ? <CreateCohorts /> : <Navigate to="/login" />} 
+            />
+            <Route path="/get-cohorts" element={<GetCohorts />} />
+            <Route path="/cohorts/:id" element={<Cohort />} />
+            
+          </Routes>
+        </div>
+        {user && <OnlineUsers />}
+      </Router>
+    )}
+    </div>
   );
 }
 
