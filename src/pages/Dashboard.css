@@ -1,0 +1,13 @@
+ .cohort-comment {
+    margin-top: 60px;
+    margin-left: 60px;
+    padding: 60px;
+  }
+  .add-comment{
+    padding: 30px;
+  }
+  .add-comment .btn {
+    margin-top: 20px;
+    border: transparent;
+    padding: 10px;
+  }

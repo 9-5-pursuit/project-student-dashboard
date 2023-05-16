@@ -1,0 +1,27 @@
+.navbar {
+    width: 100%;
+    box-sizing: border-box;
+    height: 10vh;
+    background: #FFC55C;
+  }
+  .navbar ul {
+    padding: 30px 0;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: flex-end;
+    
+  }
+  .navbar a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+  .navbar .btn-logout {
+    background: #618bed;
+    border: none;
+    color: white;
+    padding: 6px;
+    border-radius: 5px;
+    margin-top: -10px;
+  }
