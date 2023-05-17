@@ -1,0 +1,14 @@
+.all-bday{
+    color: #197019;
+}
+.filtered-bday{
+    color: #197019;
+}
+.student-card{
+    display: grid;
+    grid-template-columns: 100px 2fr 1 fr;
+    grid-column-gap: 25px;
+    margin:10px 0;
+    padding: 25px;
+    border: 2px solid #197019;
+}
