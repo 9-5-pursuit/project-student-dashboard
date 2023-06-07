@@ -2,7 +2,7 @@
 
 Built a student dashboard that makes use of some randomized data. The dashboard shows easy to understand data, formatted in a way that is easy for a user to use.
 
-This project includes some existing code which will helped complete the features.
+This project includes some existing code which helped complete the features.
 
 - [`src/data/data.json`](./src/data/data.json): This contains data for over 200 students. Each student has multiple properties associated with them. Some important ones include:
   - `id`: A unique ID associated with each student.
@@ -13,13 +13,13 @@ This project includes some existing code which will helped complete the features
 
 ### ✩ Student list
 
-- Created a list of students that displays first arrive on the page.
+- Created a list of students that displays when first arrive on the page.
 - Each students' data appears with specific infomation.
 
 ### ✩ Cohort list
 
 - Created a list of cohorts based on the data available.
-- Sorted and formatted the Cohort list
+- Sorted and formatted the Cohort list.
 
 ### ✩ Interactive cohort list
 
@@ -27,7 +27,7 @@ Updated the cohort list so that when any of the cohorts are clicked the student 
 
 ### ✩ Improved student list
 
-Updated the interactive student list by adding features to display additional student details
+Updated the interactive student list by adding features to display additional student details.
 
 ### ✩ 1-on-1 section
 
