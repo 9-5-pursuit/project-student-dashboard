@@ -13,12 +13,14 @@ This project includes some existing code which helped complete the features.
 
 ### ✩ Student list
 
-- Created a list of students that displays when first arrive on the page.
+Created a list of students that displays when first arrive on the page.
+
 - Each students' data appears with specific infomation.
 
 ### ✩ Cohort list
 
-- Created a list of cohorts based on the data available.
+Created a list of cohorts based on the data available.
+
 - Sorted and formatted the Cohort list.
 
 ### ✩ Interactive cohort list
