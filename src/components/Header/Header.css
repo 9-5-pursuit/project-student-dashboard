@@ -1,0 +1,12 @@
+header {
+  background-color: rgb(30, 106, 44);
+  height: 200px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  font-size: 64px;
+}
