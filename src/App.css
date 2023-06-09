@@ -22,12 +22,15 @@ header h1 {
 
 .student-profile {
   display: grid;
-  grid-template-columns: 20% 65% 15%;
+  grid-template-columns: 10% 75% 15%;
   border: 1px solid rgb(197, 33, 15);
-   padding: 5px 5px;
+   padding: 10px 10px;
   margin: 10px 10px; 
 } 
-
+.student-profile img{
+    width: 125px;
+    height: 175px;
+}
 
 .ontrack-to-graduate-container{
     margin-top: 15px;
@@ -48,11 +51,11 @@ padding: 10px 10px;
 .displaycohort-list {
   padding: 15px 15px;
   margin: 25px 25px;
-  border-bottom: 1px solid rgb(29, 173, 55);
+  border-bottom: 1px solid rgb(72, 29, 173);
  font-weight: bold; 
 }
 
-.commnet-container {
+.commnent-container {
   margin-top: 25px;
 }
 
@@ -66,3 +69,4 @@ student-show-more-container{
      display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
+

@@ -3,6 +3,7 @@ import StudentDetails from "./StudentDetails"
 import Comment from "./Comment"
 
 function Showmore({ codewars, certifications, cohort }) {
+     
   const [showMore, setshowMore] = useState(false);
 
   return (
@@ -12,14 +13,13 @@ function Showmore({ codewars, certifications, cohort }) {
           {showMore ? "Show Less..." : "Show More..."}
         </span>
       </p>
-
       <div>
         {showMore && (
           <>
             <StudentDetails
-            //   codewars={codewars}
-            //   certifications={certifications}
-            //   cohort={cohort}
+              codewars={codewars}
+              certifications={certifications}
+              cohort={cohort}
             />
             <hr />
             <Comment />
@@ -30,4 +30,4 @@ function Showmore({ codewars, certifications, cohort }) {
   );
 }
 
-export default Showmore
+export default Showmore;

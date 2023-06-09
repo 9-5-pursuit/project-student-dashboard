@@ -11,7 +11,7 @@ function DisplayStudent({ studentList }) {
    return fixedDob;
   }
 
-  function OntrackToGraduate(certs, codeWars) {
+  function OntrackToGraduate(certs, codewars) {
 
     let isOnTrack = true;
 
@@ -23,9 +23,8 @@ function DisplayStudent({ studentList }) {
       }
     }
 
-    for (let codeWar in codeWars) {
-  
-      if (codeWars[codeWar].total <= 600) {
+    for (let codewar in codewars) {
+      if (codewars[codewar].total <= 600) {
         isOnTrack = false;
         return isOnTrack;
       }
@@ -54,27 +53,27 @@ function DisplayStudent({ studentList }) {
             certifications,
             cohort,
           }) => (
-            <div key={id} className="student-profile .container ">
-              <div className="photo .img-fluid.">
+            <div key={id} className="student-profile img-sm-start ">
+              <div className="photo">
                 <img src={profilePhoto} alt={preferredName} />
               </div>
-              <did>
-                <h3 className=".align-right">
+              <div className="profile .cotainer text-center .text-sm-start ">
+                <h3 className="name col-">
                   {preferredName} {middleName[0]} {surname}
                 </h3>
                 <p>
                   <span>{username}</span>
                 </p>
                 <p>
-                  <span className="text-success">Birthday: </span>{" "}
+                  <span className="text-success ">Birthday: </span>{" "}
                   {FixingDob(dob)}
                 </p>
                 <Showmore
                   cohort={cohort}
                   certifications={certifications}
-                  codeWars={codewars}
+                  codewars={codewars}
                 />
-              </did>
+              </div>
               <p className="ontrack-to-graduate-container">
                 {OntrackToGraduate(certifications, codewars) && (
                   <span className="text-success">On Track to Graduate</span>
