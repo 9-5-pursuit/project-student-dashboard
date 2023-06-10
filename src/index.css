@@ -1,0 +1,173 @@
+body {
+  background-color: rgba(0, 0, 255, 0.646);
+}
+
+header {
+  align-items: center;
+  background-image: url("../public/assets/pngwing.com\ \(1\).png");
+  color: rgb(74, 247, 253);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  width: 100%;
+}
+
+h1 {
+  margin: 10 auto;
+  font-size: 75px;
+  text-align: end;
+  text-decoration: double;
+  width: 100%;
+}
+
+.toppestLevel {
+  display: grid;
+  row-gap: 40px;
+}
+
+main {
+  display: grid;
+  grid-row: 2;
+  grid-template-columns: 1.2fr 2fr;
+}
+
+/* - - - STUDENT LIST - - - */
+
+img {
+  width: 100px;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 5px;
+}
+
+.studentList {
+  display: grid;
+  grid-column: 2;
+  grid-template-rows: max-content;
+  margin-left: 20px;
+  margin-right: 20px;
+  row-gap: 15px;
+}
+
+.studentListHeader {
+  border-bottom: 2px solid rgb(74, 247, 253);
+  padding: 20px;
+  text-align: center;
+}
+
+.scrollStudents {
+  height: 90vh;
+  overflow-y: scroll;
+}
+
+.student {
+  border: 2px solid rgb(74, 247, 253) s;
+  display: block;
+  margin-left: 20px;
+  margin-top: 10px;
+  width: 90%;
+}
+
+.studentInfo {
+  display: flex;
+}
+
+.showMore {
+  margin-left: 40%;
+}
+
+.studentCohortLink {
+  color: rgb(33, 68, 144);
+  font-weight: bolder;
+}
+
+a {
+  text-decoration: underline;
+  color: rgb(60, 211, 231);
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.studentStats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.studentStats div,
+.Notes div form {
+  margin-left: 10px;
+}
+
+.studentStats span {
+  color: rgb(3, 30, 120);
+}
+
+hr {
+  background: rgb(60, 211, 231);
+  color: rgb(3, 30, 120);
+  height: 1px;
+  width: 90%;
+}
+
+.Notes {
+  display: grid;
+  justify-items: flex-start;
+  margin-left: 20px;
+}
+
+.form {
+  border: 1px solid rgb(29, 90, 233);
+  width: 90%;
+}
+
+form {
+  display: block;
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+input {
+  margin-top: 10px;
+}
+
+/* - - - COHORT LIST - - - */
+
+aside {
+  border: 2px solid rgb(74, 247, 253);
+  align-items: center;
+  display: block;
+  justify-items: center;
+}
+.cohortList {
+  grid-column: 1;
+  grid-row: 1;
+  margin: 20px;
+  padding: 20px;
+}
+.cohortList h2 {
+  text-align: center;
+}
+
+.cohort span:hover {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* - - - Graduation - - - */
+
+.Graduate {
+  color: rgb(3, 30, 120);
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.cohortButton {
+  background-color: rgb(60, 211, 231);
+  color: rgb(3, 30, 120);
+  margin-left: 35%;
+}
