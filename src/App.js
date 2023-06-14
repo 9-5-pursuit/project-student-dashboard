@@ -1,4 +1,4 @@
-import studentData from "./data/data.json";
+//import studentData from "./data/data.json";
 import StudentList from "./Components/StudentList";
 import { useState } from "react";
 function App() {

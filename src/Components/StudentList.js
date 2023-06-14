@@ -4,7 +4,7 @@ import { FaTimes, FaCheck } from "react-icons/fa";
 import React from "react";
 
 function StudentList() {
-  const [student, setStudent] = useState(studentData);
+  const [student, ] = useState(studentData);
   const [showMore, setShowMore] = useState(false);
   function formatDate(birthDate) {
     const date = new Date(birthDate);
